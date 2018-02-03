@@ -1,6 +1,6 @@
 import { GraphQLString, GraphQLObjectType, GraphQLNonNull } from "graphql";
-import find from "lodash/find";
 import { AuthorType } from "./author.schema";
+import { getAuthorByPost } from "../resolvers";
 
 export const PostType = new GraphQLObjectType({
 	name: "Post",
@@ -11,7 +11,7 @@ export const PostType = new GraphQLObjectType({
 		body: { type: GraphQLString },
 		author: {
 			type: AuthorType,
-			resolve: post => find(Authors, a => a.id == post.author_id)
+			resolve: getAuthorByPost
 		}
 	})
 });
