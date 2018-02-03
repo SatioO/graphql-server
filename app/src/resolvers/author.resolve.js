@@ -1,4 +1,4 @@
-import { Authors } from "../../data";
+import { Authors } from "../data";
 import find from "lodash/find";
 
 export const getAuthors = _ => Authors;
