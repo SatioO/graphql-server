@@ -1,0 +1,36 @@
+{
+	"name": "graphql-server",
+	"version": "1.0.0",
+	"description": "GraphQL server implementation",
+	"main": "app.js",
+	"scripts": {
+		"start": "nodemon app/server.js --exec babel-node --presets es2015",
+		"build": "babel app -d dist --presets es2015,stage-2",
+		"serve": "node dist/server.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SatioO/graphql-server.git"
+	},
+	"keywords": [],
+	"author": "Vaibhav Satam<vaibhav.satam29991@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SatioO/graphql-server/issues"
+	},
+	"homepage": "https://github.com/SatioO/graphql-server#readme",
+	"dependencies": {
+		"express": "^4.16.2",
+		"express-graphql": "^0.6.11",
+		"graphql": "^0.12.3"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-stage-2": "^6.24.1",
+		"babel-register": "^6.26.0"
+	}
+}
