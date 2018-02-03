@@ -1,28 +1,16 @@
 import express from "express";
 import { buildSchema } from "graphql";
 import graphqlHTTP from "express-graphql";
+import schema from "./src/schema";
 
 const app = express();
 const PORT = 4000;
-
-const schema = buildSchema(`
-    type Query {
-        postTitle: String,
-        blogTitle: String
-    }
-`);
-
-const root = {
-	postTitle: () => "Sample post title",
-	blogTitle: () => "Sample blog title"
-};
 
 app.use(
 	"/",
 	graphqlHTTP({
 		graphiql: true,
-		schema: schema,
-		rootValue: root
+		schema: schema
 	})
 );
 
