@@ -4,8 +4,7 @@
 	"description": "GraphQL server implementation",
 	"main": "app.js",
 	"scripts": {
-		"start":
-			"rimraf dist/ & nodemon app/server.js --exec babel-node --presets es2015",
+		"start": "rimraf dist/ & nodemon app/server.js --exec babel-node --presets es2015",
 		"build": "babel app -d dist --presets es2015,stage-2",
 		"serve": "node dist/server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -22,9 +21,15 @@
 	},
 	"homepage": "https://github.com/SatioO/graphql-server#readme",
 	"dependencies": {
+		"bluebird": "^3.5.1",
+		"body-parser": "^1.18.2",
+		"compression": "^1.7.1",
 		"express": "^4.16.2",
 		"express-graphql": "^0.6.11",
-		"graphql": "^0.12.3"
+		"graphql": "^0.12.3",
+		"helmet": "^3.10.0",
+		"mongoose": "^5.0.3",
+		"morgan": "^1.9.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
