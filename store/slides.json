@@ -1,0 +1,940 @@
+{
+    "accion-intro":
+    {
+        "title":"Introduction to Accion Labs","access":"guest","categories":"corporate",
+        "description":"Introduction to Accion Labs as a company, including technology focus, head count, engagement models and investor support",
+        "thumbnail":"Accion Labs Logo.png",
+        "authors":"kinesh-doshi,pramod-patil,ashutosh-bijoor",
+        "slides":[
+            ["title-content",{"title":"Accion Labs Introduction",
+                "bullets":[
+                    "-Focussed on Emerging Technologies",
+                    "--Service oriented, component based architecture, cloud hosted",
+                    "--Over 650 employees worldwide, with expertise in emerging technologies",
+                    "-Range of collaborative and flexible engagement models",
+                    "--New development, maintenece, support, QE/Testing, Reverse/Re-engineering",
+                    "--Projects, Co-development, Turn-key Development, Partnerships, Extended teams",
+                    "-Well Established",
+                    "--Offices in Pittsburgh, Santa Clara, Scottsdale, Atlanta, London, Bangalore, Mumbai, Singapore, Malaysia",
+                    "--Financially stable, strong PE backing - Basil Partners, Anchor Group",
+                    "-IP in key technology areas",
+                    "--Frameworks, tools, technology evaluation matrices, process guidelines",
+                    "-Strong experience with Agile delivery and its real life applications"
+                ]
+            }]
+        ]
+    },
+    "emerging-tech-landscape":
+    {
+        "title":"Emerging Technologies Landscape","tagline":"A Reference Chart","access":"guest","categories":"research",
+        "description":"The entire emerging technology landscape that Accion Labs has capabilities in, and specifically the Accion Innovation Center",
+        "thumbnail":"Accion Labs Emerging Tech Landscape.png",
+        "authors":"ashutosh-bijoor,pramod-patil",
+        "slides":[
+            ["home",{"title":"Emerging Technology Capabilties","subtitle":"Technology Landscape, Case Stories","version":"1.2","date":"10 Jan 2015"}],
+            ["@accion-intro",{"section":true}],
+            ["startsection"],
+            ["etech",{"tech":"all","layer":"overview"}],
+            ["etech",{"tech":"all","layer":"ui"}],
+            ["etech",{"tech":"all","layer":"app"}],
+            ["etech",{"tech":"all","layer":"db"}],
+            ["etech",{"tech":"all","layer":"cloud"}],
+            ["etech",{"tech":"all","layer":"devops"}],
+            ["endsection"],
+            ["title-content",{"sectionid":"java-tech-stack","title":"Java Technology Stack"}],
+            ["startsection"],
+            ["etech",{"tech":"java","layer":"overview"}],
+            ["etech",{"tech":"java","layer":"ui"}],
+            ["etech",{"tech":"java","layer":"app"}],
+            ["etech",{"tech":"java","layer":"db"}],
+            ["etech",{"tech":"java","layer":"cloud"}],
+            ["etech",{"tech":"java","layer":"devops"}],
+            ["endsection"],
+            ["end"]
+        ]
+    },
+    "cloud-apps-architecture":
+    {
+        "title":"Cloud Application Architecture","tagline":"An Evolutionary Study","access":"guest","categories":"research",
+        "description":"Software applications are being designed to run on the cloud - private, hybrid or public. This demo provides broad guidelines for architecting applications for the cloud",
+        "thumbnail":"Cloud Computing Acronyms.png",
+        "authors":"ashutosh-bijoor,raghuraman-ramaswamy,pramod-patil",
+        "slides":[
+            ["home",{"title":"Architecture for Cloud Applications","subtitle":"Evolution, Technology Selection, Development Approach","version":"1.0","date":"18 Jan 2015"}],
+            ["title-content",{"title":"Overview",
+                "bullets":[
+                    "-Cloud Applications",
+                    "--Benefits, Layers, Components",
+                    "-Evolution of web architecture",
+                    "--From monolithic applications to event-driven services",
+                    "-Technology Landscape",
+                    "--Technology options and basis for selection"
+                ]}],
+            ["startsection"],
+            ["title-content",{"sectionid":"cloud-computing-acronyms","title":"Cloud Applications","image":"Cloud Computing Acronyms.svg"}],
+            ["title-content",{"sectionid":"cloud-computing-benefits","title":"Cloud Computing Benefits","image":"Cloud Computing Benefits.svg"}],
+            ["title-content",{"sectionid":"cloud-computing-delivery","title":"Accelerate Delivery Time","image":"Cloud Software Delivery.svg"}],
+            ["title-content",{"sectionid":"cloud-computing-elasticity","title":"Reduce IT Infrastructure Costs","image":"Cloud Computing Elasticity.svg"}],
+            ["title-content",{"sectionid":"cloud-computing-innovation","title":"Increasing Innovation Capacity","image":"IT Capacity Enhancement.svg"}],
+            ["endsection"],
+            ["architecture"],
+            ["end"]
+        ]
+    },
+    "oodebe-intro":
+    {
+        "title":"Oodebe","tagline":"Polyglot Persistence Platform","access":"employee","categories":"platforms,oodebe",
+        "tags":"polyglot-persistence,MongoDB,Cassandra,Redis,MySQL,Oracle,PostgreSQL",
+        "description":"A platform that provides a ready-to-use middleware layer to abstract away the complexity of implementing a Polyglot Persistence application",
+        "abstract":"Applications today need to handle a multitude of data types ranging from structured to unstructured data. Polyglot Persistence is quickly emerging as the preferred architecture for such applications. Oodebe provides a simple, flexible, scalable and extensible solution for Polyglot Persistence",
+        "thumbnail":"Polyglot Persistence/OODEBE.png",
+        "authors":"ashutosh-bijoor,pawan-puthran",
+        "slides":[
+            ["home",{"title":"Polyglot Persistence - An Introduction","subtitle":"How to choose a database when building an application from the multitude of SQL and NoSQL options available","version":"1.0","date":"12 March 2014"}],
+            ["title-content",{"title":"Which database do we choose?","image":"Polyglot Persistence/Database Options.png"}],
+            ["title-content",{"title":"Factors affecting the choice of the database","bullets":[
+                "-Data Models",
+                "--What type of data sources do we want to integrate?",
+                "--How do we want to manipulate / analyze the data?",
+                "--What is the volume, variety and velocity of data?",
+                "-Consistency, Availability, Partitioning (CAP)",
+                "--Consistency: Only one value of an object to each client (Atomicity)",
+                "--Availability: Each client can always read and write (Low Latency)",
+                "--Partition Tolerance: The system works well despite physical network partitions (Horizontal Scalability)",
+                "--What are the CAP use cases that the application needs to handle?"
+            ]}],
+            ["title-content",{"title":"Data Models Comparison","subtitle":"Examples, Capabilities, Applications and Limitations of various data models"}],
+            ["title-blocks",{"title":"Key Value Databases","blocks":[
+                {"image":"Polyglot Persistence/Key Value Database.svg","text":"Examples: Berkley DB, MemcacheDB, Redis, DynamoDB"},
+                {"title":"Capabilities","bullets":[
+                    "The simplest model where each object is retrieved with a unique key, with values having no inherent model",
+                    "Utilize in-memory storage to provide fast access with optional persistence",
+                    "Other data models built on top of this model to provide more complex objects"
+                ]},
+                {"title":"Applications","bullets":[
+                    "Applications requiring fast access to a large number of objects, such as caches or queues",
+                    "Applications that require fast-changing data environments like mobile, gaming, online ads"
+                ]},
+                {"title":"Limitations","bullets":[
+                    "Cannot update subset of a value",
+                    "Does not provide querying",
+                    "As number of objects becomes large, generating unique keys could become complex"
+                ]}
+            ]}],
+            ["title-blocks",{"title":"Document Databases","blocks":[
+                {"image":"Polyglot Persistence/Document Database.svg","text":"Examples: MongoDB, CouchDB, Apache Solr, Elastic Search"},
+                {"title":"Capabilities","bullets":[
+                    "Extension of key-value model, where value is a structured document",
+                    "Documents can be highly complex, hierarchical data structures without requiring pre-defined 'schema'",
+                    "Supports queries on structured documents",
+                    "Search platforms are also document-oriented"
+                ]},
+                {"title":"Applications","bullets":[
+                    "Applications that need to manage a large variety of objects that differ in structure",
+                    "Large product catalogs in e-commerce, customer profiles, content management applications"
+                ]},
+                {"title":"Limitations","bullets":[
+                    "No standard query syntax",
+                    "Query performance not linearly scalable",
+                    "Join queries across collections not efficient"
+                ]}
+            ]}],
+            ["title-blocks",{"title":"Column Family Databases","blocks":[
+                {"image":"Polyglot Persistence/Column Family Database.svg","text":"Examples: Cassandra, BigTable, HBase, Apache Accumulo"},
+                {"title":"Capabilities","bullets":[
+                    "Extension of key-value model, where the value is a set of columns (column-family)",
+                    "A column can have multiple time-stamped versions",
+                    "Columns can be generated at run-time and not all rows need to have all columns"
+                ]},
+                {"title":"Applications","bullets":[
+                    "Storing a large number of time-stamped data like event logs, sensor data",
+                    "Analytics that involve querying entire columns of data such as trends or time series analytics"
+                ]},
+                {"title":"Limitations","bullets":[
+                    "No join queries or sub-queries",
+                    "Limited support for aggregation",
+                    "Ordering is done per partition, specified at table creation time"
+                ]}
+            ]}],
+            ["title-blocks",{"title":"Graph Databases","blocks":[
+                {"image":"Polyglot Persistence/Graph Database.svg","text":"Examples: Neo4J, OrientDB, Apache Giraph, AllegroGraph"},
+                {"title":"Capabilities","bullets":[
+                    "Models graphs consisting of nodes and edges with properties (meta-data) describing them",
+                    "Implement very fast graph traversal operations",
+                    "Also support indexing of meta data to enable graph traversal combined with search queries"
+                ]},
+                {"title":"Applications","bullets":[
+                    "Applications that deal with objects with a large number of inter-relations",
+                    "Applications like social networking friends-networks, hierarchical role based permissions, complex decision trees, maps, network topologies"
+                ]},
+                {"title":"Limitations","bullets":[
+                    "Difficult to scale for large data sets for generic graphs",
+                    "Giraph uses the Bulk Synchronous Parallel model to overcome some of the scalability limitations"
+                ]}
+            ]}],
+            ["title-blocks",{"title":"Relational Databases","blocks":[
+                {"image":"Polyglot Persistence/Relational Database.svg","text":"Examples: MySql, PostgreSQL, MariaDB, Oracle, SQL Server"},
+                {"title":"Capabilities","bullets":[
+                    "Conventional RDBMS structure consisting of fixed schema with ACID properties",
+                    "Provides well documented and widely supported SQL syntax",
+                    "Capable of complex queries including subqueries and joins"
+                ]},
+                {"title":"Applications","bullets":[
+                    "Transactional data applications like ERP, CRM, Banking etc.",
+                    "Applications where data volume is limited and schema are by and large fixed"
+                ]},
+                {"title":"Limitations","bullets":[
+                    "Lacks horizontal scalability and hence limited in handling 'big data'",
+                    "Not efficient at handling complex multi-level nested data",
+                    "Cannot handle “unstructured” data where structure is not known at design time"
+                ]}
+            ]}],
+            ["title-content",{"title":"Conclusion 1:","subtitle":"No single database can address all data types",
+                "text":"Compromise: Application unable to integrate multiple data types"}],
+            ["title-content",{"title":"CAP Theorem","image":"Polyglot Persistence/CAP Theorem.png"}],
+            ["title-content",{"title":"Conclusion 2:","subtitle":"No single database can address all CAP use cases",
+                "text":"Compromise: To get horizontal scalability application must give up Consistency (Atomicity) or Availability (Low Latency)"}],
+            ["title-content",{"title":"Solution: Polyglot Persistence","bullets":[
+                "-Use multiple databases",
+                "--No single database can address all data types and CAP use cases",
+                "--Different <b>data types</b> need not be forced into a single <b>data model</b>",
+                "--Different <b>use cases</b> need not be forced into a single <b>CAP model</b>",
+                "-Dealing with multiple databases need not complicate the application",
+                "--Abstract away the CRUD APIs into a separate layer",
+                "--Provide a <b>single API</b> for persisting to multiple databases <b>synchronously</b>",
+                "--Provide <b>different APIs</b> for querying data for different <b>use cases</b>",
+                "--Effectively create a <b>Unified Data Repository</b>",
+                "-How to manage Synchronization?",
+                "--OODEBE: Accion Labs's platform for Polyglot Persistence Synchronization"
+            ]}],
+            ["title-content",{"title":"<img class=\"diagram\" src=\"/images/Polyglot Persistence/OODEBE.png\" alt=\"OODEBE - Polyglot Persistence Synchronization Engine\">",
+                "subtitle":"Polyglot Persistence Platform",
+                "table":{"content":[
+                    [{"subtitle":"Simplicity","align":"right"},{"text":"Provides APIs that abstract away the complexity of multiple databases","align":"left"}],
+                    [{"subtitle":"Flexibility","align":"right"},{"text":"Handles synchronization with a flexible consistency model for each use case","align":"left"}],
+                    [{"subtitle":"Scalability","align":"right"},{"text":"Provides horizontal scalability without compromising performance","align":"left"}],
+                    [{"subtitle":"Extensibility","align":"right"},{"text":"Allows easy addition of new database engines to handle new data types or use cases","align":"left"}]
+                ]}
+            }],
+            ["title-blocks",{
+                "blocks":[
+                    {"title":"Simplicity","bullets":[
+                        "Provides a <b>single API</b> for persisting to multiple databases <b>synchronously</b>",
+                        "Provides <b>customizable APIs</b> for querying data for different <b>use cases</b>",
+                        "Ready-to-use processor plugins for most popular database engines",
+                        "Ready-to-use API controllers for typical use cases such as batch and online operations"
+                    ]},
+                    {"title":"Flexibility","bullets":[
+                        "Application-specific APIs can be created with simple configuration files",
+                        "Logical Locking to handle error recovery from any individual database operation failure",
+                        "Batch as well as online synchronization with automatic prioritization of online operations",
+                        "Coordination between processors using tightly coupled websockets or loosely coupled message queue"
+                    ]},
+                    {"title":"Scalability","bullets":[
+                        "High speed synchronization using asynchronous I/O calls to each database API",
+                        "Horizontally scalable - can distribute processors over a cluster of nodes",
+                        "Kanban Queues to balance processing rates of different processor modules",
+                        "Prioritization of online operations so that batch operations do not affect performance"
+                    ]},
+                    {"title":"Extensibility","bullets":[
+                        "Integration of new database engines via custom-built processor plugins",
+                        "Micro-services architecture with each processor acting as a service",
+                        "Customizable controllers to orchestrate application specific APIs",
+                        "Liberal open source license allows ownership of custom processors and controllers",
+                        "Accion provides customization and support for OODEBE"
+                    ]}
+                ]
+            }],
+            ["end"]
+        ]
+    },
+    "perfaccion-introduction-paper":
+    {
+        "title":"Perfaccion","tagline":"Performance Engineering Platform","access":"employee","categories":"platforms,perfaccion",
+        "description":"A platform for performance evaluation, testing and optimization. Built for scaling up cloud applications.",
+        "thumbnail":"Logos/Perfaccion.png",
+        "authors":"ashutosh-bijoor,abhimanyu-tomar,jane-poojari,saurabh-periwal",
+        "embedUrl":"https://docs.google.com/a/reach1to1.com/document/d/1jARDj8P4dlaw9U9ULZ16E6jXJtGKUouMsyjnB6zLy-M/pub?embedded=true"
+    },
+    "data-lineage-data-central-concept-note":
+    {
+        "title":"Data Lineage and Data Central","tagline":"A Proposed ETL Management Platform","access":"employee","categories":"platforms",
+        "description":"Data Lineage is a platform for managing, tracking and monitoring Data Transformations. Data Central is a Data Governance / Data Management Platform.",
+        "thumbnail":"BIDW/DataLineage DataCentral.png",
+        "authors":"aswani-karthik,sreeni-ra",
+        "embedUrl":"https://docs.google.com/a/accionlabs.com/presentation/d/197fAKUCtmcQX6XuQ_CvNvxqxilanz6ePiR0cTpgpFYw/embed?start=false&loop=false&delayms=3000"
+    },
+    "angularjs-best-practices":
+    {
+        "title":"AngularJS","tagline":"Advanced Design Patterns and Best Practices","access":"employee","categories":"research",
+        "description":"AngularJS has become widely popular as a client-side MVC framework for building complex web applications. Accion Labs has used AngularJS in several different projects and products, and the findings in this document are based on this experience.",
+        "thumbnail":"Logos/AngularJS.png",
+        "authors":"ashutosh-bijoor,jinto-jose,shailya-khwaja,rahil-shaikh",
+        "embedUrl":"https://docs.google.com/a/accionlabs.com/document/d/1q6MsNV3wY5VbQRGcpVC2u4frzmFzTMgG9MHqcbuiO5Y/pub?embedded=true"
+    },
+    "big-data-analytics-concept-note":
+    {
+        "title":"Big Data Analytics","tagline":"A Concept Note","access":"employee","categories":"research",
+        "description":"A platform",
+        "thumbnail":"Polyglot Persistence/Typical Polyglot Persistence Application.png",
+        "authors":"ashutosh-bijoor,arun-vasudevan,jane-poojari",
+       "embedUrl":"https://docs.google.com/a/accionlabs.com/presentation/d/1UyNOlsIOdXHQFQuBOFwZ88Gv0jKDUn0mWXoYVQkQ3Y0/embed?start=false&loop=false&delayms=3000"
+
+    },
+    "semantic-content-management-concept-note":
+    {
+        "title":"Semantic Content Management Systems","tagline":"A Concept Note","access":"employee","categories":"research",
+        "description":"How semantic engines can enhance the capabilities of a content management system by providing more intelligent metadata",
+        "thumbnail":"Semantic CMS/Ontology.png",
+        "authors":"ashutosh-bijoor",
+        "embedUrl":"https://docs.google.com/a/accionlabs.com/document/d/15PIOHJM8zBl58xPzbcQWOpmRDLsyYem4VFButtb12So/pub?embedded=true"
+    },
+    "ui-refactoring-approach":
+    {
+        "title":"UI Refactoring Approach","tagline":"For Enterprise Applications","access":"employee","categories":"research",
+        "description":"Recommendations for refactoring an existing enterprise UI into a web based UI using AngularJS",
+        "thumbnail":"Logos/AngularJS.png",
+        "authors":"jinto-jose",
+        "slides":[
+            ["home",{"title":"UI Refactoring Approach for Enterprise Applications",
+                "subtitle":"Application Structure, Automatic Code Generation, Git Branching Strategy",
+                "version":"1.0","date":"12 Jan 2015"
+            }],
+            ["title-content",{"title":"Patterns in Enterprise Applications UI","subtitle":"Implications for AngularJS Components"}],
+            ["title-blocks",{"title":"UI Components","blocks":[
+                {"title":"Forms","bullets":[
+                    "The UI consists of several different forms",
+                    "All forms consist of similar widgets",
+                    "Can create a library of reusable components"
+                ]},
+                {"title":"Controllers","bullets":[
+                    "All controllers have similar base CRUD functions",
+                    "Can create a base controller and extend other controllers from it",
+                    "Additional module specific functions can be added to the extended controller"
+                ]},
+                {"title":"Services","bullets":[
+                    "Services are similarly implemented like Controllers",
+                    "Base Services can implement common functions",
+                    "Individual services extend the base services"
+                ]},
+                {"title":"Models","bullets":[
+                    "Models are specific to each combination of data elements that a module uses",
+                    "Hence unlikely that we can reuse any models",
+                    "Recommend that these be created individually for each module"
+                ]}
+            ]}],
+            ["title-content",{"title":"Proposed Application Structure","image":"EP/AngularJS Components Organization.png"}],
+            ["title-content",{"title":"Sample Folder Structure","image":"EP/AngularJS Folder Structure.png"}],
+            ["title-content",{"title":"Automatic Code Generation"}],
+            ["title-content",{"title":"Yeoman Generator","bullets":[
+                "-Create a Yeoman generator for the following items:",
+                "-Creating a new <b>module</b>",
+                "--Will add all the folder structure, routing changes, and the test folder structure also, update grunt task",
+                "-Creating a <b>controller</b>(sub-generator)",
+                "--Will add the controller, and the basic unit tests for the controller also, update grunt task",
+                "-Creating a <b>service</b>(sub-generator)",
+                "--Will add service, and add the basic unit test, update grunt task",
+                "-Creating a <b>directive</b>(sub-generator)",
+                "--Will create directive with the naming convention followed for EP, unit tests"
+            ]}],
+            ["title-content",{"title":"Git Branching Strategy"}],
+            ["title-content",{"title":"Git Branching Strategy","bullets":[
+                "-Team Branches",
+                "--Each SCRUM team will have a separate branch in which they will be working in each sprint",
+                "--Team branch will be spun out of the Dev Branch",
+                "--On New Feature Additions, pull requests will be made from Team Branches to Foundation Branch",
+                "-Foundation Branch",
+                "--The Foundation Team will maintain the Foundation Branch",
+                "--The Foundation Branch will be spun out of the Dev Branch",
+                "--The Foundation Team will do code reviews for pull requests from each Team Branch",
+                "--On Approval, the Foundation Team will make a pull request to the Dev Branch",
+                "-Dev Branch",
+                "--The Product Management will maintain the Dev Branch",
+                "--The Dev Branch will be spun out of the Production Branch",
+                "--The Product Managers will do code reviews for pull requests from the Foundation Branch",
+                "--On Approval, the Product Managers will make a pull request to the Production Branch"
+            ]}],
+            ["title-content",{"title":"Git Branching Strategy","image":"EP/Git Branching Strategy.png"}],
+            ["end"]
+        ]
+    },
+    "end-to-end-testing":
+    {
+        "title":"Protractor","tagline":"An End-to-end testing framework","access":"employee","categories":"research",
+        "description":"Through a simple story, this presentation emphasizes the benefits of using Protractor in an end-to-end testing scenario.",
+        "thumbnail":"Logos/Protractor.png",
+        "authors":"jinto-jose",
+        "embedUrl":"/images/E2E/index.html#/"
+    },
+    "protractor-html-reporter":
+    {
+        "title":"Protractor HTML Reporter","tagline":"A plugin for generating test reports in HTML","access":"employee","categories":"research",
+        "description":"An npm module which generates Protractor test reports in HTML with screenshots.",
+        "thumbnail":"Logos/Protractor.png",
+        "authors":"jinto-jose",
+        "embedUrl":"https://drive.google.com/a/accionlabs.com/file/d/0B8BCpfX9F3FRX19WRVFkQ3ZCVmM/preview"
+    },
+    "selected-case-stories":
+    {
+        "title":"Selected Case Stories", "access":"employee","categories":"case-stories,research",
+        "description":"A compilation of selected case studies",
+        "thumbnail":"Accion Labs Logo.png",
+        "authors":"ashutosh-bijoor,pramod-patil",
+        "slides":[
+            ["home",{"title":"Case Stories","subtitle":"A representative selection","version":"1.0","date":"18 Jan 2015"}],
+            ["@accion-intro",{"section":true}],
+            ["title-blocks",{"title":"Case Stories","blocks":[
+                {"bullets":[
+                    "-<a href=\"#/case-story-cloud-broker\">Cloud Brokering Platform</a>",
+                    "--IaaS provider with a platform for configuring, comparing, provisioning and managing cloud infrastructure",
+                    "-<a href=\"#/case-story-acg\">Analytical Compute Grid</a>",
+                    "--A leading managed cloud services provider builds a big data analytics platform using Polyglot Persistence",
+                    "-<a href=\"#/case-story-retail-marketing-platform\">Experience as a Service</a>",
+                    "--A platform for large retail locations to monitor visitors and create marketing experiences in real-time"
+                ]},
+                {"bullets":[
+                    "-<a href=\"#/case-story-healthcare-portal\">Healthcare Management Portal</a>",
+                    "--A healthcare platform that delivers reliable and actionable information through diagnostic tests",
+                    "-<a href=\"#/case-story-claims-analytics\">Insurance Claims Analytics</a>",
+                    "--A leading CPA-directed program of professional and employment practices liability insurance",
+                    "-<a href=\"#/case-story-pharma-research\">Pharma Big Data Case Study</a>",
+                    "--The research division of a leading international pharmaceutical company that is responsible for conducting detailed search and analysis of worldwide patents"
+                ]}
+            ]}],
+            ["@case-story-cloud-broker",{"section":true}],
+            ["@case-story-acg",{"section":true}],
+            ["@case-story-healthcare-portal",{"section":true}],
+            ["@case-story-claims-analytics",{"section":true}],
+            ["@case-story-pharma-research",{"section":true}],
+            ["@case-story-retail-marketing-platform",{"section":true}],
+            ["end"]
+        ]
+    },
+    "case-story-claims-analytics":
+    {
+        "title":"Insurance Claims Analytics","tagline":"A Case Story","access":"employee","categories":"case-stories,oodebe",
+        "description":"A leading CPA-directed program of professional and employment practices liability insurance",
+        "thumbnail":"Camico Diagram.svg",
+        "authors":"arun-vasudevan,jane-poojari",
+        "slides":[
+            ["title-blocks",{"title":"Insurance Claims Analytics",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "A leading CPA-directed program of professional and employment practices liability insurance for the accounting profession",
+                    "Operating in 40+ cities in the US with over 1000 policy holders signed every month"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Complex database schema",
+                    "Risk analysis demands large scale changes in queries",
+                    "Unstructured data relating to claims",
+                    "High data volume of both, structured and unstructured data"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Unified big data repository combining structured and unstructured data",
+                    "Advanced text search and analysis for entity extraction",
+                    "Fast ad-hoc queries",
+                    "Interactive analytical visualization"
+                ]}
+            ]}],
+            ["title-content",{"image":"Camico Diagram.svg"}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS, Javascript","D3JS"],
+                "app":["Java, J2EE","Custom ETL processes"],
+                "db":["Apache Hadoop","HBase","Hive","Impala"],
+                "cloud":["Amazon EC2 (cluster)"]
+            }],
+            ["title-content",{"title":"Management Console Demo","embed":"https://www.youtube.com/embed/2vTtHf5vZYE"}],
+            ["title-content",{"embed":"http://oodebe.com/enterprise_search/signin.php?account=camico_analytics"}]
+        ]
+    },
+    "case-asset-performance-management":
+    {
+        "title":"Asset Performance Management","tagline":"A Case Story","access":"employee","categories":"case-stories,oodebe,perfaccion",
+        "description":"An Asset Performance Management Platform provider uses Oodebe for integration of a horizontally scalable data store to manage events and readings from smart devices located in manufacturing plants belonging to their customers",
+        "thumbnail":"Meridium/APM Conceptual Architecture.png",
+        "authors":"pawan-puthran",
+        "slides":[
+            ["home",{"title":"Asset Performance Management","subtitle":"A Polyglot Persistence Architecture implemented using Oodebe","version":"1.0","date":"20 Apr 2015"}],
+            ["title-blocks",{"title":"Asset Performance Management",
+                "blocks":[
+                    {"title":"Customer","bullets":[
+                        "One of the leading providers of Asset Performance Management solutions",
+                        "Software collects data from assets and devices located in manufacturing plants belonging to their customers, monitors various performance policies and provides alerts and reports to plant management"
+                    ]},
+                    {"title":"Problem / Requirements","bullets":[
+                        "Existing solution utilizes RDBMS to store data received from assets",
+                        "Limited capabilities to integrate unstructured data from smart devices",
+                        "With proliferation of smart devices, they needed to add a horizontally scalable data repository that can store time series and events data"
+                    ]},
+                    {"title":"Accion Solution / Services","bullets":[
+                        "Polyglot Persistence architecture using Oodebe synchronization engine",
+                        "Horizontally scalable architecture for both, data processing as well as persistence",
+                        "Automatic scaling based on capacity monitoring"
+                    ]}
+                ]
+            }],
+            ["tech-stack",{"title":"Technology Matrix",
+                "app":["ASP.NET","Web API","Oodebe","NodeJS","RabbitMQ"],
+                "db":["Cassandra","MS SQL Server","Apache Hadoop"],
+                "cloud":["Windows Azure"]
+            }],
+            ["title-content",{"title":"Conceptual Architecture","image":"Meridium/APM Conceptual Architecture.png"}],
+            ["title-blocks",{"title":"Success Metric, Objective",
+                "blocks":[
+                    {"title":"Metric: Data Ingestion Rate","bullets":[
+                        "Readings received per customer site: 22 million/day",
+                        "Estimated payload size: 6 GB per data transfer request",
+                        "Required Ingestion Rate:<b>250 readings/second</b>"
+                    ]},
+                    {"title":"Objectives","bullets":[
+                        "Determine cost of infrastructure to be able to deliver required performance",
+                        "Determine minimum infrastructure required to handle required ingestion rate",
+                        "Generate sample data based on payload size and rate required",
+                        "Conduct performance tests to validate the actual ingestion rate achieved"
+                    ]}
+                ]
+            }],
+            ["title-content",{"title":"Logical Architecture","image":"Meridium/APM Logical Architecture.png"}],
+            ["title-content",{"title":"Network Architecture","image":"Meridium/APM Network Architecture.png"}],
+            ["@oodebe-intro",{"section":false,"fromSlide":13,"toSlide":14}],
+            ["title-content",{"title":"Tests Conducted","bullets":[
+                "-Cassandra Stress Tests to select data model",
+                "--Created different data models in Cassandra based on sample data provided",
+                "--Generated sample data and tested ingestion and retrieval rate directly on Cassandra cluster",
+                "--Selected final data model based on best performance",
+                "-API Performance Tests",
+                "--Evaluate ingestion rate and latency of ingestion APIs implemented in Oodebe",
+                "--Comparison between IIS and self-hosted versions",
+                "--Proved that the architecture can exceed the required ingestion rate"
+            ]}],
+            ["title-content",{"title":"Data Model Selection - performance results","image":"Meridium/APM Data Model Results.png"}],
+            ["title-content",{"title":"API Performance Test Results","image":"Meridium/APM Performance Results.png",
+                "bullets":[
+                    "Performance tests were conducted on the Oodebe APIs",
+                    "Separate tests for different concurrency levels",
+                    "Average response time and throughput was measured",
+                    "Test Platform: Perfaccion - Performance Engineering Platform by Accion Labs"
+                ]
+            }],
+            ["title-blocks",{"title":"Success Metric, Objective",
+                "blocks":[
+                    {"title":"Metric: Data Ingestion Rate","bullets":[
+                        "-Readings received per customer site: 22 million/day",
+                        "--<b>DONE</b>",
+                        "-Estimated payload size: 6 GB",
+                        "--<b>DONE</b>",
+                        "-Required Ingestion Rate:<b>250 readings/second</b>",
+                        "-Achieved Ingestion Rate:<b>474 readings/second</b>"
+                    ]},
+                    {"title":"Objectives","bullets":[
+                        "-Determine minimum infrastructure required to handle required ingestion rate",
+                        "--<b>3 node Cassandra cluster</b>",
+                        "-Generate sample data based on payload size and rate required",
+                        "--<b>DONE</b>",
+                        "-Conduct performance tests to validate the actual ingestion rate achieved",
+                        "--<b>Done and 2X performance achieved</b>"
+                    ]},
+                    {"image":"Meridium/target.png"}
+                ]
+            }],
+            ["end"]
+        ]
+    },
+    "case-story-enterprise-ui-reengineering":
+    {
+        "title":"Enterprise Application UI Re-engineering","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"How a market leading provider or enterprise applications for the entertainment industry re-eingineered the entire UI in AngularJS with the help of Accion Innovation Center",
+        "thumbnail":"EP/Products Overview.png",
+        "authors":"jinto-jose,shalia-khwaja,ashutosh-bijoor,aseem-jain,saurabh-periwal",
+        "slides":[
+            ["title-blocks",{"title":"Enterprise Application Re-engineering",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "Market leader in enterprise applications for the entertainment industry",
+                    "New competitors entering market with richer UI and new features"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Legacy application in-flexible, difficult to customize",
+                    "Backend code in Java/EJB and front end code in Flex",
+                    "Market pressure to significantly improve user experience"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "AIC helped to build entire re-engineering strategy that significantly shortened time frame",
+                    "Technology selection, reference application and execution in tight coordination between AIC and customer core team",
+                    "Created Reusable Components and Classes, Reference Application, Automated code generation, and processes including QA and deployment"
+                ]}
+            ]}],
+            ["title-content",{"title":"Products Portfolio","image":"EP/Products Overview.png"}],
+            ["startsection"],
+            ["title-content",{"title":"Re-engineering Strategy","subtitle":"Original Plan by Customer, AIC Proposed Plan"}],
+            ["title-content",{"title":"Original Re-engineering Plan","image":"EP/Original Re-engineering Plan.png"}],
+            ["title-content",{"title":"Proposed Plan - Phase 1","image":"EP/Proposed Re-engineering Plan Phase 1.png"}],
+            ["title-content",{"title":"Proposed Plan - Phase 2","image":"EP/Proposed Re-engineering Plan Phase 2.png"}],
+            ["endsection"],
+            ["startsection"],
+            ["title-content",{"title":"Technology Selection","subtitle":"Analysis of UI, Technology selection matrix, Reference Architecture"}],
+            ["title-blocks",{"title":"Technology Selection Process","blocks":[
+                {"title":"Front End Requirements Investigation","bullets":[
+                    "Analysis of UI requirements of all products",
+                    "Compilation of a master list of features",
+                    "Categorization of modules into Group 1 and Group 2"
+                ]},
+                {"title":"Technology Comparison Matrix","bullets":[
+                    "-Selection of front end technology options",
+                    "--AngularJS, EmberJS, BackboneJS, jQuery",
+                    "-Scorecard for comparison of various technologies",
+                    "--Feature Richness",
+                    "--Openness",
+                    "--Extensibility"
+                ]},
+                {"title":"Reference Application","bullets":[
+                    "Provides complete set of features from master feature list",
+                    "Provides reference implementation of all types of UI elements",
+                    "Provides sample back-end RESTful APIs",
+                    "Includes Test Driven Development guidelines"
+                ]}
+            ]}],
+            ["title-content",{"title":"Technology Comparison Matrix","image":"EP/Technology Comparison Matrix.png"}],
+            ["title-content",{"title":"Reference Application Demo","embed":"https://www.youtube.com/embed/JyJnv3nrDLk"}],
+            ["endsection"],
+            ["startsection"],
+            ["title-content",{"title":"Coding Process","subtitle":"Choosing the right platforms, Application Structure, Code Generation, Git Strategy"}],
+            ["@ui-refactoring-approach",{"section":false,"fromSlide":2,"toSlide":6}],
+            ["endsection"],
+            ["startsection"],
+            ["title-content",{"title":"Team Structure and Workflow","subtitle":"Proposed Roles and Responsibilities, Allocation of Work and Workflow"}],
+            ["title-content",{"title":"Proposed Team Structure","image":"EP/Proposed Team Structure.png"}],
+            ["title-content",{"title":"Group 1 Activity Swimlane","image":"EP/Group 1 Flowchart.png"}],
+            ["title-content",{"title":"Group 2 Activity Swimlane","image":"EP/Group 2 Flowchart.png"}],
+            ["@ui-refactoring-approach",{"section":false,"fromSlide":7,"toSlide":9}],
+            ["endsection"]
+        ]
+    },
+    "case-story-cloud-broker":
+    {
+        "title":"Cloud Brokering Solution","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"IaaS provider with a platform for configuring, comparing, provisioning and managing cloud infrastructure",
+        "thumbnail":"Gravitant Software Architecture.png",
+        "authors":"aseem-jain,raghuraman-ramaswamy,shailendra-singh",
+        "slides":[
+            ["title-blocks",{"title":"Cloud Brokering Solution",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "IaaS provider with a platform for configuring, comparing, provisioning and managing cloud infrastructure"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Integrate several different cloud platforms",
+                    "Develop a single page application that provides for configuring and managing complex cloud components"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Accion Innovation Team helps build initial architecture",
+                    "Two SCRUM teams, one for front end development and one for back end web services and integration",
+                    "Test Driven Development"
+                ]}
+            ]}],
+            ["title-content",{"image":"Gravitant Software Architecture.png"}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS, Javascript","AngularJS"],
+                "app":["Java, J2EE","Spring Integration", "EJB"],
+                "db":["MS SQL Server"],
+                "cloud":["Amazon Web Services (AWS)","Rackspace Managed Cloud","Google Compute Engine","VMware vCloud","Microsoft Azure"]
+            }],
+            ["title-content",{"scrollimage":"Gravitant-Cloud-Compare.png"}],
+            ["title-content",{"scrollimage":"Enterprise Portal - Cloud Compare.png"}],
+            ["title-content",{"scrollimage":"Enterprise Portal - Cloud Compare - Provider.png"}],
+            ["title-content",{"title":"Management Console Demo","embed":"https://www.youtube.com/embed/aGtvLf66L1A"}]
+        ]
+    },
+    "case-story-healthcare-portal":
+    {
+        "title":"Healthcare Management Portal","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"A healthcare platform that delivers reliable and actionable information through diagnostic tests",
+        "thumbnail":"Alere Diagram.png",
+        "authors":"chandra-kumar,aruna-sontineni",
+        "slides":[
+            ["title-blocks",{"title":"Healthcare Management Portal",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "A healthcare platform that delivers reliable and actionable information",
+                    "With support for various types of diagnostic tests",
+                    "Delivers better clinical and economic healthcare outcomes globally"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Secure portal to access and manage patient data collected from healthcare devices",
+                    "Integration with enterprise EMRs",
+                    "Management of Patients and Devices with support across groups",
+                    "International Language Localization"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Master Data containing Groups, Patients, Users",
+                    "Front end using MVC/EF based on mock-ups and layouts provided",
+                    "Modular architecture with Inventory, Patient management, alerts and other modules",
+                    "SSRS / Reports development"
+                ]}
+            ]}],
+            ["title-content",{"image":"Alere Diagram.png"}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS, Javascript","jQuery","KendoUI"],
+                "app":["MVC 4.0, C#","Entity Framework 5.0", "WCF"],
+                "db":["MS SQL Server 2012"],
+                "cloud":["Amazon Web Services (AWS)"]
+            }],
+            ["title-content",{"title":"Management Console Demo","embed":"https://www.youtube.com/embed/Y0E107JQ9t8"}]
+        ]
+    },
+    "case-story-acg":
+    {
+        "title":"Analytical Compute Grid","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"A leading managed cloud services provider builds a big data analytics platform using Polyglot Persistence",
+        "thumbnail":"ACG Architecture.svg",
+        "authors":"saurabh-periwal,raunak-khatri",
+        "slides":[
+            ["title-blocks",{"title":"Analytical Compute Grid",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "A leading managed cloud services provider",
+                    "Primary promoter of Open Stack, the open source cloud platform"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Build a data warehouse on the cloud",
+                    "Integrate Relational, Columnar and HDFS data stores",
+                    "Provide a single ODBC/JDBC driver to access all data stores",
+                    "Provide a single management console to manage all data stores"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Polyglot Persistence Architecture",
+                    "Back end team with big data, web services background",
+                    "Front end team with HTML5, CSS, Javascript, AngularJS expertise",
+                    "Extended Development Center"
+                ]}
+            ]}],
+            ["title-content",{"image":"ACG Architecture.svg"}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS, Javascript","AngularJS"],
+                "app":["Core Java, C++"],
+                "db":["Apache Hadoop","Cassandra","PostgreSQL"],
+                "cloud":["Open Stack"]
+            }],
+            ["title-content",{"title":"Management Console Demo","embed":"https://www.youtube.com/embed/HouRlDfnF_Y"}]
+        ]
+    },
+    "case-story-pharma-research":
+    {
+        "title":"Pharma Research Repository","tagline":"A Case Story","access":"employee","categories":"case-stories,oodebe",
+        "description":"The research division of a leading international pharmaceutical company that is responsible for conducting detailed search and analysis of worldwide patents",
+        "thumbnail":"Pharma Oodebe.svg",
+        "authors":"jane-poojari,bikramjeet-nath,abhimanyu-tomar",
+        "slides":[
+            ["title-blocks",{"title":"Pharma Research Repository",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "The research division of a leading international pharmaceutical company that is responsible for conducting detailed search and analysis of worldwide patents",
+                    "Analyze millions of documents and other information sources using advanced search and graph traversal algorithms"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Disparate Information Sources in various formats, size and velocity to be integrated into a single repository",
+                    "Several Client Applications that need to acces repository with guaranteed response times",
+                    "Advanced search operations, graph traversal operations, processing of large number of documents"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Polyglot Persistence architecture using Oodebe syncrhonization engine",
+                    "Horizontally scalable service-oriented architecture capable of automatic scaling based on capacity monitoring",
+                    "Plugin-based architecture that allows adding new persistence engines, data processing logic or new indexing engines"
+                ]}
+            ]}],
+            ["title-content",{"title":"Existing Architecture","subtitle":"Limitations  of Capabilities & Performance"}],
+            ["title-content",{"title":"Existing Architecture","image":"Pharma Old Architecture.svg"}],
+            ["title-content",{"title":"Capability Limitations","bullets":[
+                "-Information Sources",
+                "--Structured data in RDBMS – fixed schema",
+                "--Unstructured data in File Archive – no analytics",
+                "--Database unable to handle large volume of data",
+                "--Limits on volume and variety of data sources",
+                "-User Applications",
+                "--Performance of search and analytics slowing down – not usable",
+                "--Inability to add new search & analytics features",
+                "--Batch ingestion of new data very cumbersome",
+                "--Stagnation of performance and capabilities"
+            ]}],
+            ["title-content",{"title":"Performance Limitations","image":"Pharma Old Performance.svg"}],
+            ["title-content",{"title":"Accion Architecture","subtitle":"Addressing the Limitations  of Capabilities & Performance"}],
+            ["tech-stack",{
+                "app":["Java/J2EE", "Spring Batch", "NodeJS", "Oodebe"],
+                "db":["MS SQL Server", "MongoDB", "Neo4J", "Apache Solr"],
+                "cloud":["Private cloud using Open Stack"]
+            }],
+            ["title-content",{"title":"Polyglot Persistence","image":"Pharma Polyglot Persistence.svg"}],
+            ["title-content",{"title":"Accion Architecture","image":"Pharma Oodebe.svg"}],
+            ["title-content",{"title":"Sample Operation Flow","image":"Pharma Data Flow.svg"}],
+            ["title-content",{"title":"Deployment Architecture","image":"Pharma Infrastructure.svg"}],
+            ["title-content",{"title":"Performance Enhancement","image":"Pharma New Performance.svg"}]
+        ]
+    },
+    "case-story-retail-marketing-platform":
+    {
+        "title":"Retail Locations Marketing Platform","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"A platform for large retail locations to monitor visitors and create marketing experiences in real-time",
+        "thumbnail":"TE2 Architecture.svg",
+        "authors":"jane-poojari,hemesh-thakkar",
+        "slides":[
+            ["title-blocks",{"title":"Retail Locations Marketing Platform",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "A market leading Experience-as-a-Service Company (XaaS)",
+                    "Integrates physical and digital experiences across mobile, web and wearable technologies",
+                    "Contextually relevant branded consumer experiences"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Single management console to control multiple venues",
+                    "Highly customized User Interface",
+                    "Integration of not-to-scale location maps",
+                    "Real time integration of location-aware data"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Extended Development Center",
+                    "Multi-tenant, SoA Architecture",
+                    "Rich Internet Application",
+                    "Responsive UI Design",
+                    "Custom AngularJS Directives",
+                    "Horizontally Scalable Data Store"
+                ]}
+            ]}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS, Javascript","AngularJS"],
+                "app":["Java/J2EE", "Apache CXF"],
+                "db":["CouchDB", "MySQL"],
+                "cloud":["Amazon AWS"]
+            }],
+            ["title-content",{"image":"TE2 Architecture.svg"}],
+            ["title-content",{"title":"Management Console Demo","embed":"https://www.youtube.com/embed/zCDmhVkimPY"}]
+        ]
+   },
+    "case-story-evp":
+    {
+        "title":"Employee Evaluation Portal","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"A leading provider of in-store solutions enhances employee performance and productivity with a responsive web portal",
+        "abstract":"By partnering with Accion Labs, the client deploys a web-based application to track, evaluate and analyze employee performance and improve productivity",
+        "thumbnail":"Anderson/Associate Evaluation.png",
+        "authors":"prafull-kulshrestha",
+        "slides":[
+            ["title-blocks",{"title":"Employee Evaluation Portal",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "Texas-based leading provider of in-store solutions",
+                    "Providing merchandisers with cutting-edge technology for their in-store needs"
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Antiquated paper-based system of evaluation",
+                    "Productivity losses due to efforts spent in  emailing documents, entering data, and tracking forms throughout the review process",
+                    "Less frequent reviews in a defined time period",
+                    "Lack of any transparency or accountability",
+                    "Difficulty in analyzing & sharing data and comparing reviews"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "EDC engagement model",
+                    "Alignment to MVC pattern for software development",
+                    "Role-based workflows for Administrator, Associates and Supervisors",
+                    "Fully customizable features for different category of employees"
+                ]}
+            ]}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS, Javascript","jQuery"],
+                "app":["PHP, Zend", "Jenkins"],
+                "db":["DB2"],
+                "devops":["IDE:Eclipse PDT","VSC:SVN"]
+            }],
+            ["title-content",{"image":"Anderson/Associate Evaluation.png"}],
+            ["title-content",{"title":"Associate Evaluation Portal Demo","embed":"https://www.youtube.com/embed/6d3aCZs--p4"}]
+        ]
+    },
+    "case-story-MDM":
+    {
+        "title":"iOS MDM Application","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"A Real-time cyber-security company leverages Accion Labs mobile application development capabilities in developing a native iOS MDM app",
+        "abstract":"By partnering with Accion Labs, the client develops a native iOS mobile app for enterprises to securely monitor, manage and maintain mobile devices and lower support costs & data security risks.",
+        "thumbnail":"Caspida/iOS MDM.png",
+        "authors":"relton-alexander",
+        "slides":[
+            ["title-blocks",{"title":"iOS MDM Application",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "Founded by a team of successful entrepreneurs, and funded by top tier venture capitalists as well as proven, industry executives",
+                    "First in the industry to provide coverage for unknown threats that have already penetrated the enterprise, without rules, signatures, sand-boxing or human analysis."
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Monitor different processes running on devices and network",
+                    "Custom calendar control to display threats/anomalies",
+                    "Minimum user intervention",
+                    "Visualizations in the form of graphs and maps",
+                    "Check jailbroken status of device",
+                    "Sync device with the server for regular updates on threats and related anomalies",
+                    "Monitor mobile data usage over Wi-Fi / 3G"
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Custom calendar control to filter threats based on day, week, month or year",
+                    "Sort & display threats chronologically or by threat score",
+                    "Web services to fetch data from server and JSON to display data on device",
+                    "Track, analyze and send a list of all running processes to the server",
+                    "Track total data moving in and out of the device through a 3G network or WIFI connection",
+                    "Ability to run in the background mode for long hours without any foreground processing",
+                    "Detection of any jailbroken device",
+                     "Use of open-source plotting and mapping frameworks for visualization",
+                     "Use of Restful services to push data to the server"
+                ]}
+            ]}],
+            ["tech-stack",{
+                "ui":["Core Plot", "Mapkit", "POP","AsyncDisplayKit"],
+                "app":["Objective C, Swift"],
+                "db":["MySQL"],
+                "cloud":["AWS"],
+                "devops":["Dev:Xcode"]
+            }],
+            ["title-content",{"image":"Caspida/iOS MDM.png"}],
+            ["title-content",{"title":"iOS MDM App Demo","embed":"https://www.youtube.com/embed/cC3NUWt05lk"}]
+        ]
+    },
+    "case-story-fuzion":
+    {
+        "title":"Fraudulent Claims Processing","tagline":"A Case Story","access":"employee","categories":"case-stories",
+        "description":"A leading data analytics and insurance management company develops an integrated solution framework to detect and manage fraud.",
+        "thumbnail":"Fuzion/Fraudulent claims.png",
+        "authors":"relton-alexander",
+        "slides":[
+            ["title-blocks",{"title":"Fraudulent Claims Processing",
+            "blocks":[
+                {"title":"Customer","bullets":[
+                    "A data mining and analytic services company",
+                    "Dedicated to serving the informational needs of the Long-Term Care (LTC) insurance industry."
+                ]},
+                {"title":"Problem / Requirements","bullets":[
+                    "Manual & rigorous screening of a large number of claims often in the range of 12000 to 15000 open claims",
+                    "Lack of any automated process for claims analysis",
+                    "Basic portal for claims processing without any multi-tenancy or collaboration features",
+                    "No risk analysis to sound out any potential fraud",
+                    "Very basic case investigation management"
+
+                ]},
+                {"title":"Accion Solution / Services","bullets":[
+                    "Web-based case management solution to manage and track all aspects of fraud scoring and case investigation",
+                    "Custom-designed business rules engine to score and prioritize all claims based on the likelihood of fraud",
+                    "Centralized, workflow-driven solution to track investigations and manage case workflows",
+                    "Scoring program automatically routes claims over a set threshold to the case manager for follow up action",
+                    "Business rules in XML format",
+                    "Mix and match of different conditions for business rule creation",
+                    "De-coupled architecture model, enables client DBs to be in multiple nodes if required",
+                     "Multi-tenancy SaaS architecture & greater collaborative environment for analysts with options to add notes, share attachments and delegate tasks"
+
+                ]}
+            ]}],
+            ["tech-stack",{
+                "ui":["HTML5, CSS", "JS, jQuery", "Bootstrap"],
+                "app":["Java, J2EE", "Groovy"],
+                "db":["SQL Server", "Terradata"],
+                "cloud":["Private Cloud (Expedient)"]
+
+            }],
+            ["title-content",{"image":"Fuzion/Fraudulent claims.png"}],
+            ["title-content",{"title":"Fraudulent Claims Processing","embed":"https://www.youtube.com/embed/h3TBINvS3co"}]
+        ]
+    }
+}

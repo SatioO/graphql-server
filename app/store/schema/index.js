@@ -1,25 +1,110 @@
-import { GraphQLList, GraphQLObjectType } from "graphql";
-import { AuthorType } from "./author.schema";
-import { PostType } from "./post.schema";
-import { getAuthors, getPosts } from "../resolvers";
+import {
+	GraphQLObjectType,
+	GraphQLList,
+	GraphQLInt,
+	GraphQLString,
+	GraphQLNonNull
+} from "graphql";
 
-// This is the Root Query
-export const BlogQueryRootType = new GraphQLObjectType({
-	name: "BlogAppSchema",
-	description: "Blog Application Schema Root",
+import { ProfileSchema, DemoSchema, StoreSchema } from "../schema";
+import { Profile, Demo, Store } from "../../controllers";
+
+export const LeaderShipQueryRootSchema = new GraphQLObjectType({
+	name: "LeaderShipAppSchema",
+	description: "Schema of Leadership Demo Application",
 	fields: () => ({
-		authors: {
-			type: new GraphQLList(AuthorType),
-			description: "List of all Authors",
-			resolve: getAuthors
+		profiles: {
+			type: new GraphQLList(ProfileSchema),
+			description: "List of all profiles",
+			args: {
+				pageOffset: {
+					type: GraphQLInt,
+					description: "Skip n documents from the cursor"
+				},
+				pageLength: {
+					type: GraphQLInt,
+					description:
+						"Cap the number of documents to be returned from the cursor"
+				},
+				sortBy: {
+					type: GraphQLString,
+					description:
+						"Specify in the sort parameter the field or fields to sort by"
+				},
+				orderBy: {
+					type: GraphQLInt,
+					description:
+						"1 or -1 to specify an ascending or descending sort respectively"
+				}
+			},
+			resolve: Profile.getProfiles
 		},
-		posts: {
-			type: new GraphQLList(PostType),
-			description: "List of all Posts",
-			resolve: getPosts
+		profile: {
+			type: ProfileSchema,
+			description: "Get profile by id",
+			args: {
+				id: {
+					type: new GraphQLNonNull(GraphQLString),
+					description: "User id"
+				}
+			},
+			resolve: Profile.getProfileById
+		},
+		demos: {
+			type: new GraphQLList(DemoSchema),
+			description: "List of all demos",
+			args: {
+				pageOffset: {
+					type: GraphQLInt,
+					description: "Skip n documents from the cursor"
+				},
+				pageLength: {
+					type: GraphQLInt,
+					description:
+						"Cap the number of documents to be returned from the cursor"
+				},
+				sortBy: {
+					type: GraphQLString,
+					description:
+						"Specify in the sort parameter the field or fields to sort by"
+				},
+				orderBy: {
+					type: GraphQLInt,
+					description:
+						"1 or -1 to specify an ascending or descending sort respectively"
+				}
+			},
+			resolve: Demo.getDemos
+		},
+		demo: {
+			type: DemoSchema,
+			description: "Get demo by id",
+			args: {
+				id: {
+					type: new GraphQLNonNull(GraphQLString),
+					description: "demo id"
+				}
+			},
+			resolve: Demo.getDemoById
+		},
+		store: {
+			type: StoreSchema,
+			description: "Get state from store",
+			args: {
+				key: {
+					type: new GraphQLNonNull(GraphQLString),
+					description: "Key name"
+				}
+			},
+			resolve: Store.getKeys
 		}
 	})
 });
 
-export * from "./author.schema";
-export * from "./post.schema";
+export * from "./profile.schema";
+export * from "./profile-input.schema";
+export * from "./skill.schema";
+export * from "./skill-input.schema";
+export * from "./demo.schema";
+export * from "./demo-input.schema";
+export * from "./store.schema";

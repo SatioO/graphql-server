@@ -1,0 +1,214 @@
+[
+    {
+        "name": "Magazine",
+        "value": "magazine",
+        "children": {
+            "mandatory": true,
+            "multiple": false,
+            "options": [
+                {
+                    "name": "2017",
+                    "value": "2017",
+                    "children": {
+                        "mandatory": true,
+                        "multiple": false,
+                        "options": [
+                            {
+                                "name": "January",
+                                "value": "2017_january",
+                                "children": {
+                                    "mandatory": true,
+                                    "multiple": false,
+                                    "options": [
+                                        {
+                                            "name": "Week1",
+                                            "value": "2017_january_week1"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "February",
+                                "value": "2017_february"
+                            },
+                            {
+                                "name": "March",
+                                "value": "2017_march"
+                            },
+                            {
+                                "name": "April",
+                                "value": "2017_april"
+                            },
+                            {
+                                "name": "May",
+                                "value": "2017_may"
+                            },
+                            {
+                                "name": "June",
+                                "value": "2017_june"
+                            },
+                            {
+                                "name": "July",
+                                "value": "2017_july"
+                            },
+                            {
+                                "name": "August",
+                                "value": "2017_august"
+                            },
+                            {
+                                "name": "September",
+                                "value": "2017_september"
+                            },
+                            {
+                                "name": "October",
+                                "value": "2017_october"
+                            },
+                            {
+                                "name": "November",
+                                "value": "2017_november"
+                            },
+                            {
+                                "name": "December",
+                                "value": "2017_december"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "2016",
+                    "value": "2016",
+                    "children": {
+                        "mandatory": true,
+                        "multiple": false,
+                        "options": [
+                            {
+                                "name": "January",
+                                "value": "2016_january"
+                            },
+                            {
+                                "name": "February",
+                                "value": "2016_february"
+                            },
+                            {
+                                "name": "March",
+                                "value": "2016_march"
+                            },
+                            {
+                                "name": "April",
+                                "value": "2016_april"
+                            },
+                            {
+                                "name": "May",
+                                "value": "2016_may"
+                            },
+                            {
+                                "name": "June",
+                                "value": "2016_june"
+                            },
+                            {
+                                "name": "July",
+                                "value": "2016_july"
+                            },
+                            {
+                                "name": "August",
+                                "value": "2016_august"
+                            },
+                            {
+                                "name": "September",
+                                "value": "2016_september"
+                            },
+                            {
+                                "name": "October",
+                                "value": "2016_october"
+                            },
+                            {
+                                "name": "November",
+                                "value": "2016_november"
+                            },
+                            {
+                                "name": "December",
+                                "value": "2016_december"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "2015",
+                    "value": "2015",
+                    "children": {
+                        "mandatory": true,
+                        "multiple": false,
+                        "options": [
+                            {
+                                "name": "January",
+                                "value": "2015_january"
+                            },
+                            {
+                                "name": "February",
+                                "value": "2015_february"
+                            },
+                            {
+                                "name": "March",
+                                "value": "2015_march"
+                            },
+                            {
+                                "name": "April",
+                                "value": "2015_april"
+                            },
+                            {
+                                "name": "May",
+                                "value": "2015_may"
+                            },
+                            {
+                                "name": "June",
+                                "value": "2015_june"
+                            },
+                            {
+                                "name": "July",
+                                "value": "2015_july"
+                            },
+                            {
+                                "name": "August",
+                                "value": "2015_august"
+                            },
+                            {
+                                "name": "September",
+                                "value": "2015_september"
+                            },
+                            {
+                                "name": "October",
+                                "value": "2015_october"
+                            },
+                            {
+                                "name": "November",
+                                "value": "2015_november"
+                            },
+                            {
+                                "name": "December",
+                                "value": "2015_december"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "News",
+        "value": "news",
+        "children": {
+            "mandatory": true,
+            "multiple": false,
+            "options": [
+                {
+                    "name": "Sports",
+                    "value": "news_sports"
+                },
+                {
+                    "name": "Technology",
+                    "value": "news_technology"
+                }
+            ]
+        }
+    }
+]

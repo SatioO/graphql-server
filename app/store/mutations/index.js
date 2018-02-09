@@ -1,11 +1,23 @@
 import { GraphQLObjectType } from "graphql";
-import { AddPost } from "./post.mutation";
+import {
+	DeleteProfile,
+	UpdateProfile,
+	CreateProfile
+} from "./profile.mutation";
+import { CreateDemo, UpdateDemo, DeleteDemo } from "./demo.mutation";
 
-export const BlogMutationRootType = new GraphQLObjectType({
-	name: "BlogAppMutation",
-	fields: {
-		add: AddPost
-	}
+export const LeaderShipAppMutationRootType = new GraphQLObjectType({
+	name: "LeaderShipAppMutation",
+	description: "Leadership App Mutation",
+	fields: () => ({
+		createProfile: CreateProfile,
+		updateProfile: UpdateProfile,
+		deleteProfile: DeleteProfile,
+		createDemo: CreateDemo,
+		updateDemo: UpdateDemo,
+		deleteDemo: DeleteDemo
+	})
 });
 
-export * from "./post.mutation";
+export * from "./profile.mutation";
+export * from "./demo.mutation";

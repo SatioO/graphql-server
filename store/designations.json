@@ -1,0 +1,157 @@
+[
+    {
+        "description": "CTO",
+        "id": 1,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Senior Vice President",
+        "id": 2,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Vice President",
+        "id": 3,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Delivery Manager",
+        "id": 4,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Senior Principal Consultant",
+        "id": 5,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Principal Consultant",
+        "id": 6,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior Consultant",
+        "id": 7,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Staff Consultant",
+        "id": 8,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior Developer",
+        "id": 9,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Developer",
+        "id": 10,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Business Analyst",
+        "id": 11,
+        "bench_ignore": 0
+    },
+    {
+        "description": "HR/Admin",
+        "id": 12,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Associate QA Engineer",
+        "id": 13,
+        "bench_ignore": 0
+    },
+    {
+        "description": "QA Engineer",
+        "id": 14,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior QA Engineer",
+        "id": 15,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Executive",
+        "id": 16,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Technical Associate",
+        "id": 17,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior Executive",
+        "id": 18,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior Business Analyst",
+        "id": 19,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior UI Designer",
+        "id": 20,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Principal Software Engineer",
+        "id": 21,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior Team Lead",
+        "id": 22,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Lead Delivery",
+        "id": 23,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Senior Principal Software Engineer",
+        "id": 24,
+        "bench_ignore": 0
+    },
+    {
+        "description": "Manager",
+        "id": 25,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Associate Director",
+        "id": 26,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Senior Manager",
+        "id": 27,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Director",
+        "id": 28,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Vice President",
+        "id": 29,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Managing Director",
+        "id": 30,
+        "bench_ignore": 1
+    },
+    {
+        "description": "Finance & Accounts",
+        "id": 31,
+        "bench_ignore": 1
+    }
+]

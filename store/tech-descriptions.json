@@ -1,0 +1,110 @@
+{
+
+    "HTML5":"Basic markup language for complex web applications adding HTML and XHTML with support for multimedia elements and scripting APIs",
+    "CSS3":"CSS3 adds several features to CSS such as media queries, name spaces, level 3 selectors",
+    "Javascript":"Javascript has emerged to be the most prolific language that works across web browsers on all devices",
+    "XSL":"XSL is a style sheet for XML documents similar to CSS2 with a different syntax",
+
+    "jQuery":"jQuery is a cross-platform javascript library that allows easy manipulation of DOM objects in web browsers",
+    "jQuery UI":"jQuery UI is a curated set of UI interactions, effects, widgets, and themes built on jQuery",
+    "jQuery Plugins":"A large number of plugins extends jQuery for almost any UI functionality",
+    "Sencha / ExtJS":"ExtJS is a part of the Sencha toolkit that provides a pure Javascript library for advanced UI features",
+
+    "AngularJS":"AngularJS is a pure Javascript based MVC framework ideal for Single Page Applications (SPAs)",
+    "EmberJS":"EmberJS is a pure Javascript based MVC framework ideal for Single Page Applications (SPAs)",
+    "BackboneJS":"BackboneJS is a pure Javascript based MVP framework, simpler than AngularJS or EmberJS",
+
+    "WebComponents":"Web Components usher in a new era of web development based on encapsulated and interoperable custom elements that extend HTML itself",
+    "Polymer":"Built atop the Web Components standards, Polymer makes it easier and faster to create anything from a button to a complete application across desktop, mobile, and beyond",
+
+    "Bootstrap":"Bootstratp by Twitter is a responsive front-end framework for CSS and Javascript based UI elements",
+    "Foundation":"Foundation is a responsive front-end framework that is leaner than Bootstrap",
+    "Pure":"Pure by Yahoo a successor of YUI is a minimal front-end framework",
+
+    "JSP":"Java Server Pages is a server-side UI toolkit typically used as a View component in Java MVC with JavaBeans as models and Servlets or Struts as controllers",
+    "GWT":"Google Web Toolkit (GWT) provides a Java based library that generates Javascript automatically to tightly couple UI with services",
+    "JSF":"JavaServer Faces (JSF) is a Java specification for building component based web interfaces",
+    "Struts":"Apache Struts extents the Java Servlets API and is typically used as controllers with JSP as Views and JavaBeans as models",
+
+    "ASP.NET":"ASP.NET vNext is a modular web framework that will integrate older components such as MVC, Web API, Web Pages and Entity Framework",
+    "MVC":"ASP.NET MVC Framework is a server-side MVC framework that uses Razor or Web Forms as a views engine",
+    "Web Forms":"Web Forms or Web Pages are .aspx files containing directives and is the main views engine for the ASP.NET MVC Framework",
+    "Telerik Kendo UI":"Kendo UI is a library of HTML5 UI controls for the ASP.NET Framework",
+    "Infragistics":"Infragistics is a library of UI controls for the ASP.NET Framework",
+
+    "Zend":"Zend is a widely used PHP based MVC framework",
+    "CodeIgniter":"CodeIgniter is a light-weight PHP based MVC framework",
+    "Symfony":"Symfony is a PHP based MVC framework that is between Cake PHP and CodeIgniter in structure and functionality",
+    "CakePHP":"Cake PHP is a PHP based MVC framework that is highly structured and rigid",
+    "Yii":"Yii is a high performance PHP based MVC framework that is fast emerging as a preferred platform for PHP",
+    "Kohana":"Kohana is a PHP based MVC framework that provides a rich set of components",
+
+    "Django":"Django is a Python based MVC framework that is the most widely used platform for Python",
+    "Flask":"Flask is a Python based microframework suited well for light-weight web services",
+    "Pyramid":"Pyramid is a Python based framework in the Pylons project",
+    "CherryPy":"CherryPy is a Python based minimalist framework",
+    "TurboGears":"TurboGears is a Python based MCV framework built using different components including SQLAlchemy (model), Genshi (view), Pylons(controller)",
+
+    "SailsJS":"SailsJS is a NodeJS based MVC framework that uses ExpressJS and SocketIO",
+    "GeddyJS":"GeddyJS is an early NodeJS based MCV framework",
+
+    "D3JS":"D3JS is a very powerful pure Javascript based open source data visualization engine that can be used to create interactive infographics",
+    "Highcharts":"Highcharts is a widely used proprietory data visualization engine containing several standard infographics",
+    "Google Charts":"Google Charts is an online API service that provides several standard chart types",
+
+
+    "Spring":"The Spring Framework is an application framework and IoC container for the Java platform",
+    "Maven":"Apache Maven is a software project management tool that can manage a project's build, reporting and documentation from a central project object model",
+    "EJB":"Enterprise JavaBeans are server side JavaEE components and is part of the JEE specification",
+    "JMS":"Java Message Service API enables sending messages between components",
+    "JTA":"Java Transaction API enables distributed transactions across multiple components",
+    "Hibernate":"Hibernate is an object-relational mapping library for Java",
+    "Scala":"Scala is a functional programming language based on Java",
+    "Groovy":"Groovy is a dynamically typed (like Python, Ruby or Perl) language for the JVM",
+    "Grails":"Grails is an Open Source, full stack, web application framework for the JVM. It takes advantage of Groovy and convention over configuration to provide more productive development",
+
+    "Web API":"Web API is a .NET framework for building HTTP services for any web client",
+    "LINQ":"Language Integrated Query is a .NET component for native data querying",
+    "TPL":"Task Parallel Library provides multi-threaded and parallel programming for .NET",
+    "EF":"Entity Framework is an object-relational mapper for .NET",
+    "WPF":"Windows Presentation Framework provides a uniform programming model for Windows clients as well as web clients",
+    "WCF":"Windows Communication Framework are APIs for .NET for building service oriented applications",
+    "SignalR":"SignalR is a .NET library for bidirectaional communication to web clients",
+
+    "Django REST":"Django REST Framework for building Python based web services",
+    "Cornice":"Cornice provides helpers to build and document REST-ish Web Services with Pyramid",
+    "ExpressJS":"ExpressJS is a NodeJS based app framework with several middleware plugins",
+    "PM2":"PM2 is a NodeJS process manager providing supervision of NodeJS apps",
+    "Browserify":"Browserify is a NodeJS based dependency manager",
+    "Gulp":"Gulp provides CLI based build automation for NodeJS apps similar to Grunt",
+    "SocketIO":"SocketIO enables real-time bidirectional event based communication for NodeJS apps",
+
+    "Websphere":"IBM Websphere Application Server (WAS) is an application server that is built using JEE, XML and Web services standards",
+    "Weblogic":"Oracle Weblogic Server is an application server for building and deploying JEE applications",
+    "Tomcat":"Apache Tomcat is an open source web server that provides support for servlets and JSP  based applications",
+    "JBoss":"RedHat's JBoss Enterprise Application Platform is an open source subscription based JEE application server",
+    "Jetty":"Jetty is a pure Java based HTTP web server and Java servlet container",
+    "Glassfish":"Oracle Glassfish is an open source application server is a flexible, light-weight JEE platform",
+
+    "IIS":"Microsoft's Internet Information Services (IIS) is a web server ideal for deploying .NET based applications",
+    "Sharepoint":"Microsoft Sharepoint is a web application framework and platform for intranet portals, document management, collaboration, social networks, enterprise search and BI",
+    "Dynamics CRM":"Microsoft Dynamics CRM is a Customer Relationship Management platform and can be customized using the .NET framework",
+    "BizTalk":"Microsoft BizTalk Server provides business process automation and application integration and can be customized using the .NET framework",
+    "Exchange":"Microsoft Exchange Server is a mail, calendar and contact management server",
+
+    "Mule ESB":"Mule ESB is a lightweight Java-based enterprise service bus (ESB) and integration platform (Service creation and hosting , Message routing , Data transformation, etc.)",
+    "CXF":"Apache CXF is an open source web services framework for Java",
+    "Camel":"Apache Camel is a rule-based routing and mediation engine for integrating Java objects",
+    "ServiceMix":"Apache ServiceMix is an open source distributed Enterprise Service Bus (ESB) for implementing SoA architecture, commonly used with ActiveMQ, Camel and CXF",
+    "ActiveMQ":"Apache ActiveMQ is an open source message broker for Java with a full Java Message Service (JMS) client",
+    "JUDDI":"JUDDI (pronounced Judy) is an open source Java implementation of OASIS the Universal Description, Discovery, and Integration (UDDI) specification for (Web) Services",
+
+    "Apache Tika":"Apache Tika is a toolkit that detects and extracts metadata and text from thousands of different file types including PPT, XLS, PDF etc.",
+    "Mahout":"Apache Mahout is an open source scalable machine leadning platform for collaborative filtering, clustering and classification",
+    "Stanbol":"Apache Stanbol is an open source software stack for semantic content management and integrates with several content management platforms (CMS)",
+
+    "Map Reduce":"Map Reduce is a programming model for distributed cluster computing and is the heart of Hadoop",
+    "Apache Spark":"Apache Spark is an open source distributed cluster computing (aka map-reduce) platform that uses in-memory computing for very fast distributed computing",
+    "Storm":"Apache Storm is an open source distributed realtime (stream) computing platform similar to Spark Streaming but faster, though Spark Streaming offers better fault tolerence",
+    "Spark Streaming":"Apache Spark Streaming brings Spark's API to stream processing, and supports Java and Scala"
+}

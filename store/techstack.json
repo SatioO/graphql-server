@@ -1,0 +1,541 @@
+{
+    "ui": {
+        "title": "User Interface, Rich Internet & Mobile Applications",
+        "color": "yellow",
+        "style": "warning",
+        "options": [
+            [
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "XSL"
+            ],
+            [
+                "jQuery",
+                "jQuery UI",
+                "jQuery Plugins",
+                "Sencha / ExtJS"
+            ],
+            [
+                "AngularJS",
+                "EmberJS",
+                "BackboneJS",
+                "Wicket",
+                "Apache Cordova"
+            ],
+            [
+                "ReactJS",
+                "FLUX"
+            ],
+            [
+                "Bootstrap",
+                "Foundation"
+            ],
+            [
+                "Web Components",
+                "Polymer"
+            ],
+            [
+                "Java",
+                "JSP",
+                "GWT",
+                "JSF",
+                "Struts",
+                "JavaFX"
+            ],
+            [
+                "ASP.NET",
+                "MVC",
+                "Web Forms",
+                "Telerik Kendo UI",
+                "Infragistics"
+            ],
+            [
+                "PHP",
+                "Ruby",
+                "Ruby on Rails",
+                "Zend",
+                "CodeIgniter",
+                "Symfony",
+                "Yii",
+                "Kohana",
+                "CakePHP"
+            ],
+            [
+                "Python",
+                "Django",
+                "Flask",
+                "Pyramid",
+                "CherryPy",
+                "TurboGears"
+            ],
+            [
+                "NodeJS",
+                "ExpressJS",
+                "SailsJS",
+                "GeddyJS"
+            ],
+            [
+                "Graphiti",
+                "WindowBuilder",
+                "SWT/JFace"
+            ],
+            [
+                "D3JS",
+                "Highcharts",
+                "Google Charts"
+            ],
+            [
+                "iOS:",
+                "Cocoa",
+                "iOS CoreGraphics",
+                "iOS CoreImages",
+                "iOS Core data",
+                "iOS Autolayout",
+                "iOS UIStoryBoards",
+                "iOS Map kit",
+                "iOS Healthkit",
+                "iOS Swift",
+                "UILocal Notifications",
+                "GPS and Location Awareness",
+                "Cyberlink for UPnP"
+            ],
+            [
+                "Android:",
+                "Grand Central Dispatch",
+                "Android UI",
+                "Shared Preferences",
+                "Bluetooth Communication",
+                "Android Beacon library"
+            ],
+            [
+                "Mobile (other):",
+                "Blackberry",
+                "Phonegap",
+                "jQueryMobile",
+                "KnockoutJS",
+                "IconicJS",
+                "Titanium"
+            ]
+        ]
+    },
+    "app": {
+        "title": "Application Services & Integration",
+        "color": "orange",
+        "style": "danger",
+        "options": [
+            [
+                "Java",
+                "Spring",
+                "EJB",
+                "JMS",
+                "JPA",
+                "JMX",
+                "JSF",
+                "JTA",
+                "Hibernate",
+                "Scala",
+                "Groovy",
+                "Grails",
+                "CXF"
+            ],
+            [
+                "ASP.NET",
+                "Web API",
+                "LINQ",
+                "TPL",
+                "EF",
+                "WPF",
+                "WCF",
+                "SignalR"
+            ],
+            [
+                "Python",
+                "Django REST",
+                "Cornice"
+            ],
+            [
+                "NodeJS",
+                "ExpressJS",
+                "PM2",
+                "Browserify",
+                "Gulp",
+                "SocketIO"
+            ],
+            [
+                "Websphere",
+                "Weblogic",
+                "Tomcat",
+                "JBoss",
+                "Jetty",
+                "Glassfish"
+            ],
+            [
+                "BizTalk",
+                "Exchange"
+            ],
+            [
+                "Mule ESB",
+                "Camel",
+                "ServiceMix",
+                "JAXR",
+                "JUDDI"
+            ],
+            [
+                "Apache Tika",
+                "Mahout",
+                "Stanbol"
+            ],
+            [
+                "Map Reduce",
+                "Apache Spark",
+                "Storm",
+                "Spark Streaming"
+            ],
+            [
+                "ETL:",
+                "Informatica",
+                "ODI",
+                "SSIS",
+                "Data Stage"
+            ],
+            [
+                "BI Enterprise Reporting:",
+                "Business Objects",
+                "Oracle Business Intelligence Ent Edition",
+                "Micro Strategy",
+                "QlikView"
+            ],
+            [
+                "BI Open Source Reporting:",
+                "JasperSoft",
+                "BIRT",
+                "Pentaho"
+            ],
+            [
+                "BI Modeling:",
+                "Erwin",
+                "Oracle SQL Data Modeler"
+            ],
+            [
+                "BI Analytics:",
+                "Oracle BI Apps",
+                "Oracle Comm Data Model/ORDM"
+            ],
+            [
+                "BI (Others):",
+                "MDM",
+                "Oracle Data Miner",
+                "Oracle Analytical Workspace",
+                "CUBES",
+                "Tableau"
+            ],
+            [
+                "Payment Integration:",
+                "Paypal",
+                "Authorize.net",
+                "Zuora"
+            ]
+        ]
+    },
+    "db": {
+        "title": "Databases & Indexing Engines",
+        "color": "green",
+        "style": "success",
+        "options": [
+            [
+                "Relational:",
+                "MS-SQL",
+                "Oracle",
+                "MySql",
+                "PostgreSQL",
+                "DB2"
+            ],
+            [
+                "Relational:",
+                "Teradata",
+                "Greenplum",
+                "MariaDB",
+                "Shark",
+                "SQLite"
+            ],
+            [
+                "HDFS:",
+                "Hadoop",
+                "Tachyon"
+            ],
+            [
+                "Key-Value:",
+                "Accumulo",
+                "BerkleyDB",
+                "Redis",
+                "DynamoDB"
+            ],
+            [
+                "Document:",
+                "MongoDB",
+                "CouchDB",
+                "Couchbase",
+                "Riak",
+                "RethinkDB"
+            ],
+            [
+                "Graph:",
+                "Giraph",
+                "Neo4J",
+                "Blueprints",
+                "OrientDB",
+                "GraphX"
+            ],
+            [
+                "Columnar:",
+                "Hive",
+                "HBase",
+                "Cassandra",
+                "Redshift"
+            ],
+            [
+                "Search:",
+                "Apache SOLR",
+                "Elastic Search",
+                "GSA"
+            ],
+            [
+                "Statistics:",
+                "R",
+                "NumPy",
+                "Matlab"
+            ],
+            [
+                "Ingestion:",
+                "Flume",
+                "Sqoop",
+                "Kafka"
+            ],
+            [
+                "Queus:",
+                "RabbitMQ",
+                "Apache Kafka",
+                "Amazon SQS",
+                "ZeroMQ"
+            ]
+        ]
+    },
+    "cloud": {
+        "title": "Cloud Infrastructure",
+        "color": "blue",
+        "style": "info",
+        "options": [
+            [
+                "AWS:",
+                "EC2",
+                "S3",
+                "Lambda",
+                "EBS",
+                "Glacier"
+            ],
+            [
+                "AWS:",
+                "CloudFront",
+                "RDS",
+                "DynamoDB",
+                "ElastiCache"
+            ],
+            [
+                "OpenStack:",
+                "Nova",
+                "Swift",
+                "Cinder",
+                "Neutron",
+                "Horizon"
+            ],
+            [
+                "OpenStack:",
+                "Keystone",
+                "Glance",
+                "Heat",
+                "Ceilometer",
+                "Trove"
+            ],
+            [
+                "OpenStack:",
+                "Ironic",
+                "Zaqar",
+                "Sahara",
+                "Object Rocket"
+            ],
+            [
+                "Azure:",
+                "VM",
+                "Batch",
+                "Scheduler",
+                "SQL",
+                "Tables",
+                "BLOB Storage",
+                "BizTalk Services"
+            ],
+            [
+                "Azure:",
+                "Active Directory",
+                "Service Bus",
+                "CDN"
+            ],
+            [
+                "VMware vCloud:",
+                "vSphere",
+                "vCenter",
+                "vRealize",
+                "vMotion"
+            ],
+            [
+                "VMware vCloud:",
+                "VMFS",
+                "DRS",
+                "App HA",
+                "Avamar",
+                "Nicira"
+            ],
+            [
+                "Heroku",
+                "Cloud Foundry",
+                "Google Compute Engine"
+            ],
+            [
+                "IBM SmartCloud",
+                "Google Imctfy"
+            ],
+            [
+                "TIBCO Cloud Bus",
+                "TIBCO Spotfire"
+            ],
+            [
+                "Salesforce",
+                "APEX",
+                "Visualforce",
+                "SOQL",
+                "SOSL"
+            ]
+        ]
+    },
+    "devops": {
+        "title": "Dev Ops",
+        "color": "gray",
+        "style": "default",
+        "options": [
+            [
+                "Dev IDE:",
+                "Eclipse",
+                "NetBeans",
+                "Visual Studio"
+            ],
+            [
+                "Code Builders:",
+                "Ant",
+                "Grunt",
+                "Maven",
+                "Gradle",
+                "MSBuild",
+                "NAnt",
+                "Visual Studio",
+                "Power Shell",
+                "Velocity",
+                "ThymeLeaf",
+                "XText",
+                "GWT"
+            ],
+            [
+                "Continuous Integration:",
+                "Bamboo",
+                "AnthillPro",
+                "Continuum",
+                "Gump",
+                "Jenkins",
+                "Hudson",
+                "Travis CI"
+            ],
+            [
+                "Revision Control:",
+                "Git",
+                "SVN",
+                "TFS",
+                "Fossil",
+                "ClearCase"
+            ],
+            [
+                "Unit Testing:",
+                "Junit",
+                "JWalk",
+                "TestNG",
+                "CsUnit",
+                "Gallio",
+                "NUnit",
+                "WindowTester"
+            ],
+            [
+                "Unit Testing:",
+                "Moq",
+                "DbUnit",
+                "JSUnit",
+                "Qunit",
+                "MbUnit"
+            ],
+            [
+                "Functional Testing:",
+                "Selenium",
+                "Mocha",
+                "JFunc",
+                "Yii",
+                "Telerik"
+            ],
+            [
+                "Functional Testing:",
+                "TF",
+                "Pylons",
+                "Pytest",
+                "Tsung",
+                "QTP",
+                "SoapUI"
+            ],
+            [
+                "Performance Testing:",
+                "Perfaccion",
+                "Locust",
+                "Apache Benchmark",
+                "Protractor"
+            ],
+            [
+                "Performance Testing:",
+                "Gatling",
+                "Grinder",
+                "Load Runner"
+            ],
+            [
+                "Behavior Testing:",
+                "Open Cafe",
+                "Cucumber",
+                "JBehave",
+                "Jasmine"
+            ],
+            [
+                "Config Mgmt:",
+                "Puppet",
+                "Chef",
+                "Docker",
+                "Ansible",
+                "Salt"
+            ],
+            [
+                "Defect Mgmt:",
+                "Quality Center",
+                "ALM",
+                "Jira"
+            ],
+            [
+                "Eclipse Plugins Development",
+                "RCP",
+                "EMF",
+                "JavaFx"
+            ]
+        ]
+    }
+}

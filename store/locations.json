@@ -1,0 +1,46 @@
+[
+    {
+        "description": "Pittsburgh, USA",
+        "id": 1
+    },
+    {
+        "description": "Atlanta, USA",
+        "id": 2
+    },
+    {
+        "description": "Santa Clara, USA",
+        "id": 3
+    },
+    {
+        "description": "UK",
+        "id": 4
+    },
+    {
+        "description": "Singapore",
+        "id": 5
+    },
+    {
+        "description": "Malaysia",
+        "id": 6
+    },
+    {
+        "description": "Bangalore, Whitefield, India",
+        "id": 7
+    },
+    {
+        "description": "Bangalore, JP Nagar, India",
+        "id": 8
+    },
+    {
+        "description": "Mumbai",
+        "id": 9
+    },
+    {
+        "description": "Gurgaon",
+        "id": 10
+    },
+    {
+        "description": "Goa",
+        "id": 11
+    }
+]

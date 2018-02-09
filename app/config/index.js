@@ -8,7 +8,7 @@ let config = {
 		port: process.env.PORT
 	},
 	database: {
-		connect_uri: `mongodb://${process.env.HOST}:27017/graphql`
+		connect_uri: `mongodb://${process.env.HOST}:27017/aic`
 	},
 	jwt_secret: ""
 };
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 			port: process.env.PORT
 		},
 		database: {
-			connect_uri: `mongodb://${process.env.HOST}:27017/graphql`
+			connect_uri: `mongodb://${process.env.HOST}:27017/aic`
 		},
 		jwt_secret: ""
 	};

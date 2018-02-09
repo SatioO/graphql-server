@@ -1,15 +1,14 @@
 import express from "express";
-import Promise from "bluebird";
 import compression from "compression";
 import bodyParser from "body-parser";
-import graphqlHTTP from "express-graphql";
+import Promise from "bluebird";
 import helmet from "helmet";
 import logger from "morgan";
 import mongoose from "mongoose";
+import graphqlHTTP from "express-graphql";
 import config from "./config";
-
-import { buildSchema } from "graphql";
-import { BlogAppSchema } from "./store";
+// GraphQL store
+import { LeadershipAppSchema } from "./store";
 
 const app = express();
 
@@ -22,11 +21,11 @@ if (process.env.NODE_ENV === "local") {
 	});
 }
 
-if (process.env.NODE_ENV === "local") {
-	app.use(logger("combined"));
-}
+// if (process.env.NODE_ENV === "local") {
+// 	app.use(logger("combined"));
+// }
 
-// connect to Mongo when the app initializes
+// Connect to Mongo when the app initializes
 const options = {
 	promiseLibrary: Promise
 };
@@ -36,31 +35,32 @@ mongoose.connect(config.database.connect_uri);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// compress responses that include a Cache-Control header with the no-transform directive,
+// Compress responses that include a Cache-Control header with the no-transform directive,
 app.use(compression());
 
-// server settings
+// Server settings
 app.use(helmet());
 
+// CORS
 app.use((req, res, next) => {
 	const allowOrigin =
 		req.headers.origin ||
 		`http://:${config.web_server.host}:${config.web_server.port}`;
 
-	// Website you wish to allow to connect
+	// Website we wish to allow to connect
 	res.setHeader("Access-Control-Allow-Origin", allowOrigin);
 
-	// Set to true if you need the website to include cookies in the requests sent
-	// to the API (e.g. in case you use sessions)
+	// Set to true if we need the website to include cookies in the requests sent
+	// to the API (e.g. in case we use sessions)
 	res.setHeader("Access-Control-Allow-Credentials", true);
 
-	// Request headers you wish to allow
+	// Request headers we wish to allow
 	res.setHeader(
 		"Access-Control-Allow-Headers",
 		"Content-Type, Authentication, X-Access-Token"
 	);
 
-	// Request methods you wish to allow
+	// Request methods we wish to allow
 	res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
 
 	// Handle preflight requests
@@ -77,7 +77,7 @@ app.use(
 	graphqlHTTP({
 		graphiql: true,
 		pretty: true,
-		schema: BlogAppSchema
+		schema: LeadershipAppSchema
 	})
 );
 
@@ -99,8 +99,8 @@ if (process.env.NODE_ENV === "local") {
 	});
 }
 
-// production error handler
-// no stacktraces leaked to user
+// Production error handler
+// No stacktraces leaked to user
 app.use((err, req, res, next) => {
 	res.status(err.status || 500);
 	return res.json({

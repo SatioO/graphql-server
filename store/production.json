@@ -1,0 +1,11 @@
+{
+    "port":5000,
+    "authentication":{
+        "type":"google",
+        "clientId":"111711300838-tqras02ed4lokuaefc1vlgdbena0tc4e.apps.googleusercontent.com",
+        "clientSecret":"NrVW1PftdgnOO6Go3k8Ef0YV",
+        "returnURL":"http://oodebe.com:5000/auth/google/return",
+        "realm":"http://oodebe.com:5000"
+    }
+
+}

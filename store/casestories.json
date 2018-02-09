@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "value": "eCommerce"
+    },
+    {
+        "id": 2,
+        "value": "Supply Chain"
+    },
+    {
+        "id": 3,
+        "value": "Point of Sale"
+    },
+    {
+        "id": 4,
+        "value": "Payor (Insurance company related)"
+    },
+    {
+        "id": 5,
+        "value": "HIPAA"
+    },
+    {
+        "id": 6,
+        "value": "EDI"
+    },
+    {
+        "id": 7,
+        "value": "EMR"
+    },
+    {
+        "id": 8,
+        "value": "HL7"
+    },
+    {
+        "id": 9,
+        "value": "Payments"
+    },
+    {
+        "id": 10,
+        "value": "Loans"
+    },
+    {
+        "id": 11,
+        "value": "Property & Casualty"
+    },
+    {
+        "id": 12,
+        "value": "Money Transfer"
+    },
+    {
+        "id": 13,
+        "value": "Malpractice"
+    },
+    {
+        "id": 14,
+        "value": "Claims Processing"
+    },
+    {
+        "id": 15,
+        "value": "Online Training"
+    },
+    {
+        "id": 16,
+        "value": "AWS"
+    },
+    {
+        "id": 17,
+        "value": "Money Transfer"
+    },
+    {
+        "id": 18,
+        "value": "Azure"
+    },
+    {
+        "id": 19,
+        "value": "OpenStack"
+    },
+    {
+        "id": 20,
+        "value": "iOS"
+    },
+    {
+        "id": 21,
+        "value": "Android"
+    },
+    {
+        "id": 22,
+        "value": "Hybrid"
+    },
+    {
+        "id": 23,
+        "value": "SAP"
+    },
+    {
+        "id": 24,
+        "value": "Salesforce"
+    },
+    {
+        "id": 25,
+        "value": "Siebel"
+    },
+    {
+        "id": 26,
+        "value": "Billing"
+    },
+    {
+        "id": 27,
+        "value": "Site Core"
+    },
+    {
+        "id": 28,
+        "value": "Share Point"
+    },
+    {
+        "id": 29,
+        "value": "Word Press"
+    },
+    {
+        "id": 30,
+        "value": "Big Data"
+    },
+    {
+        "id": 31,
+        "value": "No SQL"
+    },
+    {
+        "id": 32,
+        "value": "Hadoop"
+    },
+    {
+        "id": 33,
+        "value": "Cassandra"
+    },
+    {
+        "id": 34,
+        "value": "MongoDB"
+    },
+    {
+        "id": 35,
+        "value": "MS BI"
+    },
+    {
+        "id": 36,
+        "value": "Tableau"
+    },
+    {
+        "id": 37,
+        "value": "QlikView"
+    }
+]
