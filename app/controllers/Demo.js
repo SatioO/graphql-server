@@ -2,7 +2,7 @@ import { DemoModel } from "../models";
 import { client } from "../config/connection";
 
 export const Demo = {
-	getDemos: async (
+	find: async (
 		_,
 		{
 			pageOffset = 0,
@@ -37,7 +37,7 @@ export const Demo = {
 			return error;
 		}
 	},
-	getDemo: async (_, { key = "id", id }) => {
+	findOne: async (_, { key = "id", id }) => {
 		try {
 			const result = await client.search({
 				index: "aic",
@@ -78,7 +78,7 @@ export const Demo = {
 			return error;
 		}
 	},
-	createDemo: async (_, { data }) => {
+	save: async (_, { data }) => {
 		try {
 			const demoModel = new DemoModel(data);
 			const response = await demoModel.save();
@@ -87,7 +87,7 @@ export const Demo = {
 			return error;
 		}
 	},
-	updateDemo: async (_, { data }) => {
+	update: async (_, { data }) => {
 		try {
 			const id = data.id;
 			delete data.id;
@@ -97,7 +97,7 @@ export const Demo = {
 			return error;
 		}
 	},
-	deleteDemo: async (_, { id }) => {
+	delete: async (_, { id }) => {
 		try {
 			const response = await DemoModel.update(
 				{ id: id },

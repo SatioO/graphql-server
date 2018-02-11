@@ -1,8 +1,7 @@
 import { GraphQLObjectType, GraphQLString, GraphQLList } from "graphql";
-import { ProfileType } from "../types";
 import { Store } from "../types";
 
-export const StoreSchema = new GraphQLObjectType({
+export const StoreResponseSchema = new GraphQLObjectType({
 	name: "STORE",
 	description: "Store schema",
 	fields: () => ({

@@ -6,9 +6,9 @@ import {
 	GraphQLNonNull
 } from "graphql";
 
-import { ProfileSchema, DemoSchema, StoreSchema } from "../schema";
+import { ProfileSchema, DemoSchema, StoreResponseSchema } from "../schema";
 import { Profile, Demo, Store } from "../../controllers";
-import { DemoResponseSchema } from "./demo-response.schema";
+import { DemoResponseSchema, ProjectResponseSchema } from "./index";
 
 export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 	name: "LeaderShipAppSchema",
@@ -38,7 +38,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 						"1 or -1 to specify an ascending or descending sort respectively"
 				}
 			},
-			resolve: Profile.getProfiles
+			resolve: Profile.find
 		},
 		profile: {
 			type: ProfileSchema,
@@ -49,7 +49,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 					description: "User id"
 				}
 			},
-			resolve: Profile.getProfileById
+			resolve: Profile.findOne
 		},
 		demos: {
 			type: DemoResponseSchema,
@@ -75,7 +75,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 						"1 or -1 to specify an ascending or descending sort respectively"
 				}
 			},
-			resolve: Demo.getDemos
+			resolve: Demo.find
 		},
 		demo: {
 			type: DemoSchema,
@@ -90,10 +90,10 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 					description: "demo id"
 				}
 			},
-			resolve: Demo.getDemo
+			resolve: Demo.findOne
 		},
 		store: {
-			type: StoreSchema,
+			type: StoreResponseSchema,
 			description: "Get state from store",
 			args: {
 				key: {
@@ -102,15 +102,40 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 				}
 			},
 			resolve: Store.getKeys
+		},
+		projects: {
+			type: ProjectResponseSchema,
+			description: "List of all projects",
+			args: {
+				pageOffset: {
+					type: GraphQLInt,
+					description: "Skip n documents from the cursor"
+				},
+				pageLength: {
+					type: GraphQLInt,
+					description:
+						"Cap the number of documents to be returned from the cursor"
+				},
+				sortBy: {
+					type: GraphQLString,
+					description:
+						"Specify in the sort parameter the field or fields to sort by"
+				},
+				orderBy: {
+					type: GraphQLInt,
+					description:
+						"1 or -1 to specify an ascending or descending sort respectively"
+				}
+			},
+			resolve: () => {
+				console.log("project");
+			}
 		}
 	})
 });
 
 export * from "./profile.schema";
-export * from "./profile-input.schema";
 export * from "./skill.schema";
-export * from "./skill-input.schema";
 export * from "./demo.schema";
-export * from "./demo-input.schema";
 export * from "./store.schema";
-export * from "./demo-response.schema";
+export * from "./project.schema";

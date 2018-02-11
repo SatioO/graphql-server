@@ -11,7 +11,7 @@ export const CreateProfile = {
 			type: ProfileInputSchema
 		}
 	},
-	resolve: Profile.createProfile
+	resolve: Profile.save
 };
 
 export const UpdateProfile = {
@@ -23,7 +23,7 @@ export const UpdateProfile = {
 			type: ProfileInputSchema
 		}
 	},
-	resolve: Profile.updateProfile
+	resolve: Profile.update
 };
 
 export const DeleteProfile = {
@@ -35,5 +35,5 @@ export const DeleteProfile = {
 			type: new GraphQLNonNull(GraphQLID)
 		}
 	},
-	resolve: Profile.deleteProfile
+	resolve: Profile.delete
 };

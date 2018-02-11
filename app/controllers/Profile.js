@@ -2,7 +2,7 @@ import { ProfileModel } from "../models";
 import { Store } from "./Store";
 
 export const Profile = {
-	getProfiles: async (
+	find: async (
 		_,
 		{ pageOffset = 0, pageLength = 10, sortBy = "id", orderBy = 1 }
 	) => {
@@ -46,7 +46,7 @@ export const Profile = {
 			return error;
 		}
 	},
-	getProfileById: async (_, { id }) => {
+	findOne: async (_, { id }) => {
 		try {
 			const profile = await ProfileModel.findOne({ id: id });
 			const locations = Store.getKeys(_, { key: "location" });
@@ -81,7 +81,7 @@ export const Profile = {
 			return error;
 		}
 	},
-	deleteProfile: async (_, { id }) => {
+	delete: async (_, { id }) => {
 		try {
 			await ProfileModel.findOneAndUpdate(
 				{ id: id },
@@ -93,7 +93,7 @@ export const Profile = {
 			return error;
 		}
 	},
-	updateProfile: async (_, { data }) => {
+	update: async (_, { data }) => {
 		try {
 			const id = data.id;
 			delete data.id;
@@ -103,7 +103,7 @@ export const Profile = {
 			return error;
 		}
 	},
-	createProfile: async (_, { data }) => {
+	create: async (_, { data }) => {
 		try {
 			const profileModel = new ProfileModel(data);
 			const response = await profileModel.save();

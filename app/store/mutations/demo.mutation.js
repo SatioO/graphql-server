@@ -11,7 +11,7 @@ export const CreateDemo = {
 			type: DemoInputSchema
 		}
 	},
-	resolve: Demo.createDemo
+	resolve: Demo.save
 };
 
 export const UpdateDemo = {
@@ -23,7 +23,7 @@ export const UpdateDemo = {
 			type: DemoInputSchema
 		}
 	},
-	resolve: Demo.updateDemo
+	resolve: Demo.update
 };
 
 export const DeleteDemo = {
@@ -35,5 +35,5 @@ export const DeleteDemo = {
 			type: new GraphQLNonNull(GraphQLID)
 		}
 	},
-	resolve: Demo.deleteDemo
+	resolve: Demo.delete
 };
