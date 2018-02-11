@@ -1,28 +1,28 @@
 process.env.NODE_ENV = process.env.NODE_ENV || "local";
-process.env.PORT = process.env.PORT || 4000;
+process.env.PORT = process.env.PORT || 3003;
 process.env.HOST = process.env.HOST || "127.0.0.1";
 
 let config = {
 	web_server: {
-		host: process.env.HOST || "127.0.0.1",
+		host: process.env.HOST,
 		port: process.env.PORT
 	},
 	database: {
 		connect_uri: `mongodb://${process.env.HOST}:27017/aic`
 	},
-	jwt_secret: ""
+	jwt_secret: "aicteamisawesome"
 };
 
 if (process.env.NODE_ENV === "production") {
 	config = {
 		web_server: {
-			host: process.env.HOST || "127.0.0.1",
+			host: process.env.HOST,
 			port: process.env.PORT
 		},
 		database: {
 			connect_uri: `mongodb://${process.env.HOST}:27017/aic`
 		},
-		jwt_secret: ""
+		jwt_secret: "aicteamisawesome"
 	};
 }
 
