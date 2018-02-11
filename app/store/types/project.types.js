@@ -10,7 +10,7 @@ import {
 	GraphQLUnionType
 } from "graphql";
 
-import { ProjectSchema, ProjectDocsSchema } from "../schema";
+import { ProjectSchema, ProjectDocsSchema, SkillSchema } from "../schema";
 
 export const ProjectResponseType = () => ({
 	total: {
@@ -34,22 +34,23 @@ export const ProjectDocs = () => ({
 });
 
 export const ProjectType = () => ({
-	project_name: { type: GraphQLString, description: "project name" },
-	start_date: { type: GraphQLString, description: "project started on" },
-	status: { type: GraphQLString, description: "project current status" },
-	tags: { type: GraphQLString, description: "project tags" },
-	team_size: { type: GraphQLInt, description: "project team size" },
-	techstack: { type: GraphQLString, description: "project technical stack" },
-	project_manager: { type: GraphQLString, description: "project manager" },
-	active: { type: GraphQLString, description: "project status" },
-	approved_by: { type: GraphQLString, description: "project approved by" },
-	approved_on: { type: GraphQLString, description: "project approved on" },
-	client_id: { type: GraphQLID, description: "project approved on" },
-	client_name: { type: GraphQLString, description: "project client name" },
-	description: { type: GraphQLString, description: "project description" },
-	end_date: { type: GraphQLString, description: "project ending on" },
-	is_approved: { type: GraphQLString, description: "project approval status" },
-	manager: { type: GraphQLString, description: "project delivery manager" },
+	project_name: { type: GraphQLString, description: "Project name" },
+	start_date: { type: GraphQLString, description: "Project started on" },
+	status: { type: GraphQLString, description: "Project current status" },
+	tags: { type: GraphQLString, description: "Project tags" },
+	team_size: { type: GraphQLInt, description: "Project team size" },
+	techstack: { type: SkillSchema, description: "Project techstack" },
+	project_manager: { type: GraphQLString, description: "Project manager" },
+	active: { type: GraphQLString, description: "Project status" },
+	approved_by: { type: GraphQLString, description: "Project approved by" },
+	approved_on: { type: GraphQLString, description: "Project approved on" },
+	client_id: { type: GraphQLID, description: "Project approved on" },
+	client_name: { type: GraphQLString, description: "Project client name" },
+	description: { type: GraphQLString, description: "Project description" },
+	end_date: { type: GraphQLString, description: "Project ending on" },
+	is_approved: { type: GraphQLString, description: "Project approval status" },
+	manager: { type: GraphQLString, description: "Project delivery manager" },
+	photograph: { type: GraphQLString, description: "Project delivery manager" },
 	project_docs: {
 		type: new GraphQLList(ProjectDocsSchema),
 		description: "Project document list"

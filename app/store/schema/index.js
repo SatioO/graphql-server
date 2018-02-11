@@ -7,7 +7,7 @@ import {
 } from "graphql";
 
 import { ProfileSchema, DemoSchema, StoreResponseSchema } from "../schema";
-import { Profile, Demo, Store } from "../../controllers";
+import { Profile, Demo, Store, Project } from "../../controllers";
 import { DemoResponseSchema, ProjectResponseSchema } from "./index";
 
 export const LeaderShipQueryRootSchema = new GraphQLObjectType({
@@ -127,9 +127,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 						"1 or -1 to specify an ascending or descending sort respectively"
 				}
 			},
-			resolve: () => {
-				console.log("project");
-			}
+			resolve: Project.find
 		}
 	})
 });
