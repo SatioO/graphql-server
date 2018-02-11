@@ -9,7 +9,7 @@ import {
 	GraphQLUnionType
 } from "graphql";
 
-import { SkillSchema } from "../schema";
+import { SkillSchema, DemoSchema } from "../schema";
 import { Slides } from "./slide.types";
 
 export const DemoType = () => ({
@@ -30,6 +30,10 @@ export const DemoType = () => ({
 	authors: {
 		type: new GraphQLList(GraphQLString),
 		description: "Demo authors"
+	},
+	related: {
+		type: new GraphQLList(DemoSchema),
+		description: "Related Demos"
 	},
 	categories: { type: GraphQLString, description: "demo category" },
 	techstack: {

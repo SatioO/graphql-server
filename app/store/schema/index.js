@@ -8,6 +8,7 @@ import {
 
 import { ProfileSchema, DemoSchema, StoreSchema } from "../schema";
 import { Profile, Demo, Store } from "../../controllers";
+import { DemoResponseSchema } from "./demo-response.schema";
 
 export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 	name: "LeaderShipAppSchema",
@@ -51,7 +52,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 			resolve: Profile.getProfileById
 		},
 		demos: {
-			type: new GraphQLList(DemoSchema),
+			type: DemoResponseSchema,
 			description: "List of all demos",
 			args: {
 				pageOffset: {
@@ -80,12 +81,16 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 			type: DemoSchema,
 			description: "Get demo by id",
 			args: {
+				key: {
+					type: GraphQLString,
+					description: "demo key"
+				},
 				id: {
 					type: new GraphQLNonNull(GraphQLString),
 					description: "demo id"
 				}
 			},
-			resolve: Demo.getDemoById
+			resolve: Demo.getDemo
 		},
 		store: {
 			type: StoreSchema,
@@ -108,3 +113,4 @@ export * from "./skill-input.schema";
 export * from "./demo.schema";
 export * from "./demo-input.schema";
 export * from "./store.schema";
+export * from "./demo-response.schema";

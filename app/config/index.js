@@ -5,7 +5,8 @@ process.env.HOST = process.env.HOST || "127.0.0.1";
 let config = {
 	web_server: {
 		host: process.env.HOST,
-		port: process.env.PORT
+		port: process.env.PORT,
+		elasticsearch: 9200
 	},
 	database: {
 		connect_uri: `mongodb://${process.env.HOST}:27017/aic`
@@ -17,7 +18,8 @@ if (process.env.NODE_ENV === "production") {
 	config = {
 		web_server: {
 			host: process.env.HOST,
-			port: process.env.PORT
+			port: process.env.PORT,
+			elasticsearch: 9200
 		},
 		database: {
 			connect_uri: `mongodb://${process.env.HOST}:27017/aic`

@@ -1,24 +1,79 @@
 import { DemoModel } from "../models";
+import { client } from "../config/connection";
 
 export const Demo = {
 	getDemos: async (
 		_,
-		{ pageOffset = 0, pageLength = 10, sortBy = "id", orderBy = 1 }
+		{
+			pageOffset = 0,
+			pageLength = 10,
+			sortBy = "_firstCreatedTimestamp",
+			orderBy = "desc"
+		}
 	) => {
 		try {
-			return await DemoModel.find({
-				$or: [{ milestone: "approved" }, { milestone: "published" }]
-			})
-				.sort({ [sortBy]: orderBy })
-				.skip(pageOffset)
-				.limit(pageLength);
+			const result = await client.search({
+				index: "aic",
+				type: "presentations",
+				body: {
+					from: pageOffset,
+					size: pageLength,
+					query: {
+						bool: {
+							should: [
+								{ term: { milestone: "published" } },
+								{ term: { milestone: "approved" } }
+							]
+						}
+					},
+					sort: [{ [sortBy]: { order: orderBy } }]
+				}
+			});
+			return {
+				total: result.hits.total,
+				items: result.hits.hits.map(demo => demo._source)
+			};
 		} catch (error) {
 			return error;
 		}
 	},
-	getDemoById: async (_, { id }) => {
+	getDemo: async (_, { key = "id", id }) => {
 		try {
-			return await DemoModel.findOne({ id: id });
+			const result = await client.search({
+				index: "aic",
+				type: "presentations",
+				body: {
+					from: 0,
+					size: 5,
+					query: {
+						bool: {
+							must: { match: { [key]: id } }
+						}
+					}
+				}
+			});
+			const source = result.hits.hits[0]._source;
+
+			const related = await client.search({
+				index: "aic",
+				type: "presentations",
+				body: {
+					from: 0,
+					size: 5,
+					query: {
+						bool: {
+							must: { match: { categories: source.categories } },
+							should: [
+								{ term: { milestone: "published" } },
+								{ term: { milestone: "approved" } }
+							]
+						}
+					}
+				}
+			});
+
+			source.related = related.hits.hits.map(demo => demo._source);
+			return source;
 		} catch (error) {
 			return error;
 		}

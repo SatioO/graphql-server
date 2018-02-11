@@ -4,3 +4,4 @@ export * from "./skill.types";
 export * from "./demo.types";
 export * from "./demo-input.types";
 export * from "./store.types";
+export * from "./demo-response.types"
