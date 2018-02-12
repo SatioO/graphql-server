@@ -6,13 +6,14 @@ import {
 	GraphQLNonNull
 } from "graphql";
 
-import { Profile, Demo, Store, Project } from "../../controllers";
+import { Profile, Demo, Store, Project, Search } from "../../controllers";
 import {
 	ProfileSchema,
 	DemoSchema,
 	StoreResponseSchema,
 	DemoResponseSchema,
 	ProjectResponseSchema,
+	SearchResponseSchema,
 	ProjectSchema
 } from "../schema";
 
@@ -149,6 +150,26 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 				}
 			},
 			resolve: Project.findOne
+		},
+		search: {
+			type: SearchResponseSchema,
+			description: "Search profiles, projects and presentations",
+			args: {
+				query: {
+					type: new GraphQLNonNull(GraphQLString),
+					description: "search term"
+				},
+				pageOffset: {
+					type: GraphQLInt,
+					description: "Skip n documents from the cursor"
+				},
+				pageLength: {
+					type: GraphQLInt,
+					description:
+						"Cap the number of documents to be returned from the cursor"
+				}
+			},
+			resolve: Search.find
 		}
 	})
 });
@@ -158,3 +179,4 @@ export * from "./skill.schema";
 export * from "./demo.schema";
 export * from "./store.schema";
 export * from "./project.schema";
+export * from "./search.schema";
