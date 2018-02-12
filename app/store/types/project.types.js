@@ -34,6 +34,7 @@ export const ProjectDocs = () => ({
 });
 
 export const ProjectType = () => ({
+	project_id: { type: GraphQLID, description: "Project id" },
 	project_name: { type: GraphQLString, description: "Project name" },
 	start_date: { type: GraphQLString, description: "Project started on" },
 	status: { type: GraphQLString, description: "Project current status" },
@@ -63,7 +64,7 @@ export const ProjectType = () => ({
 		type: GraphQLString,
 		description: "Project created date"
 	},
-	_lastUpdatedBy: {
+	_lastUpdateBy: {
 		type: GraphQLString,
 		description: "Project Updated By"
 	},

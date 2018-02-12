@@ -30,7 +30,43 @@ export const Project = {
 			items: result.hits.hits.map(project => project._source)
 		};
 	},
-	findOne: () => {},
+	findOne: async (_, { key = "project_name", value }) => {
+		try {
+			const result = await client.search({
+				index: "aic",
+				type: "projects",
+				body: {
+					from: 0,
+					size: 1,
+					query: {
+						bool: {
+							must: { match: { [key]: value } }
+						}
+					}
+				}
+			});
+
+			const project_members = await client.search({
+				index: "aic",
+				type: "project_members",
+				body: {
+					from: 0,
+					size: 5,
+					query: {
+						bool: {
+							must: {
+								match: { project_id: result.hits.hits[0]._source.project_id }
+							}
+						}
+					}
+				}
+			});
+			result.hits.hits[0]._source.project_members = project_members;
+			return result.hits.hits[0]._source;
+		} catch (error) {
+			return error;
+		}
+	},
 	save: () => {},
 	update: () => {},
 	delete: () => {}

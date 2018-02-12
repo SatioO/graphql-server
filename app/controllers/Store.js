@@ -28,7 +28,7 @@ export const Store = {
 			if (!path) {
 				throw new Error("Unknown config requested");
 			}
-			return { name: `${key}`, result: require("../../store/" + path) };
+			return { name: `${key}`, result: require("../../../store/" + path) };
 		} catch (error) {
 			return error;
 		}

@@ -44,7 +44,7 @@ export const Demo = {
 				type: "presentations",
 				body: {
 					from: 0,
-					size: 5,
+					size: 1,
 					query: {
 						bool: {
 							must: { match: { [key]: id } }

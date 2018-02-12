@@ -6,9 +6,15 @@ import {
 	GraphQLNonNull
 } from "graphql";
 
-import { ProfileSchema, DemoSchema, StoreResponseSchema } from "../schema";
 import { Profile, Demo, Store, Project } from "../../controllers";
-import { DemoResponseSchema, ProjectResponseSchema } from "./index";
+import {
+	ProfileSchema,
+	DemoSchema,
+	StoreResponseSchema,
+	DemoResponseSchema,
+	ProjectResponseSchema,
+	ProjectSchema
+} from "../schema";
 
 export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 	name: "LeaderShipAppSchema",
@@ -128,6 +134,21 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 				}
 			},
 			resolve: Project.find
+		},
+		project: {
+			type: ProjectSchema,
+			description: "Get project by id",
+			args: {
+				key: {
+					type: GraphQLString,
+					description: "project key"
+				},
+				value: {
+					type: new GraphQLNonNull(GraphQLString),
+					description: "project id"
+				}
+			},
+			resolve: Project.findOne
 		}
 	})
 });
