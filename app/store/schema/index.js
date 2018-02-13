@@ -27,6 +27,10 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 			type: new GraphQLList(ProfileSchema),
 			description: "List of all profiles",
 			args: {
+				category: {
+					type: GraphQLString,
+					description: "Profile category"
+				},
 				pageOffset: {
 					type: GraphQLInt,
 					description: "Skip n documents from the cursor"
