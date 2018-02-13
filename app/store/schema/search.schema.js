@@ -7,7 +7,7 @@ import {
 	GraphQLUnionType
 } from "graphql";
 import { SearchResponseType } from "../types";
-import { DemoSchema, ProfileSchema, ProjectSchema } from "./index";
+import { DemoSchema, ProjectSchema, ProfileListSchema } from "./index";
 
 export const SearchResponseSchema = new GraphQLObjectType({
 	name: "SEARCH",
@@ -97,7 +97,7 @@ export const SearchProfileSchema = new GraphQLObjectType({
 		pageLength: { type: GraphQLInt, description: "total number of items" },
 		total: { type: GraphQLInt, description: "total number of items" },
 		items: {
-			type: new GraphQLList(ProfileSchema),
+			type: new GraphQLList(ProfileListSchema),
 			description: "profile items"
 		}
 	}
