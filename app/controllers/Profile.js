@@ -63,7 +63,7 @@ export const Profile = {
 			const locations = Store.getKeys(_, { key: "location" });
 			const designations = Store.getKeys(_, { key: "designation" });
 
-			return profiles.hits.hits.map(profile => {
+			const result = profiles.hits.hits.map(profile => {
 				if (!!profile && !!profile._source.location) {
 					locations.result.map(location => {
 						if (String(location.id) === profile._source.location) {
@@ -88,6 +88,13 @@ export const Profile = {
 				}
 				return profile._source;
 			});
+
+			return {
+				pageOffset: pageOffset,
+				pageLength: pageLength,
+				total: profiles.hits.total,
+				items: result
+			};
 		} catch (error) {
 			return error;
 		}

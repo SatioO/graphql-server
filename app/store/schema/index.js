@@ -24,7 +24,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 	description: "Schema of Leadership Demo Application",
 	fields: () => ({
 		profiles: {
-			type: new GraphQLList(ProfileSchema),
+			type: ProfileSchema,
 			description: "List of all profiles",
 			args: {
 				category: {
