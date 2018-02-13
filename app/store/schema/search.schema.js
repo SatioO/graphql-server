@@ -16,23 +16,29 @@ export const SearchResponseSchema = new GraphQLObjectType({
 });
 
 export class Profiles {
-	constructor(total, items) {
+	constructor(pageOffset, pageLength, total, items) {
 		this.total = total;
 		this.items = items;
+		this.pageOffset = pageOffset;
+		this.pageLength = pageLength;
 	}
 }
 
 export class Projects {
-	constructor(total, items) {
+	constructor(pageOffset, pageLength, total, items) {
 		this.total = total;
 		this.items = items;
+		this.pageOffset = pageOffset;
+		this.pageLength = pageLength;
 	}
 }
 
 export class Demos {
-	constructor(total, items) {
+	constructor(pageOffset, pageLength, total, items) {
 		this.total = total;
 		this.items = items;
+		this.pageOffset = pageOffset;
+		this.pageLength = pageLength;
 	}
 }
 
@@ -46,6 +52,8 @@ export const SearchType = new GraphQLInterfaceType({
 				: obj instanceof Demos ? SearchDemosSchema : null;
 	},
 	fields: {
+		pageOffset: { type: GraphQLInt, description: "total number of items" },
+		pageLength: { type: GraphQLInt, description: "total number of items" },
 		total: { type: GraphQLInt, description: "total number of items" }
 	}
 });
@@ -56,6 +64,8 @@ export const SearchProjectsSchema = new GraphQLObjectType({
 	interfaces: [SearchType],
 	isTypeOf: obj => obj instanceof Projects,
 	fields: {
+		pageOffset: { type: GraphQLInt, description: "total number of items" },
+		pageLength: { type: GraphQLInt, description: "total number of items" },
 		total: { type: GraphQLInt, description: "total number of items" },
 		items: {
 			type: new GraphQLList(ProjectSchema),
@@ -70,6 +80,8 @@ export const SearchDemosSchema = new GraphQLObjectType({
 	interfaces: [SearchType],
 	isTypeOf: obj => obj instanceof Demos,
 	fields: {
+		pageOffset: { type: GraphQLInt, description: "total number of items" },
+		pageLength: { type: GraphQLInt, description: "total number of items" },
 		total: { type: GraphQLInt, description: "total number of items" },
 		items: { type: new GraphQLList(DemoSchema), description: "demos items" }
 	}
@@ -81,6 +93,8 @@ export const SearchProfileSchema = new GraphQLObjectType({
 	interfaces: [SearchType],
 	isTypeOf: obj => obj instanceof Profiles,
 	fields: {
+		pageOffset: { type: GraphQLInt, description: "total number of items" },
+		pageLength: { type: GraphQLInt, description: "total number of items" },
 		total: { type: GraphQLInt, description: "total number of items" },
 		items: {
 			type: new GraphQLList(ProfileSchema),

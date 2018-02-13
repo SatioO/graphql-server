@@ -41,18 +41,24 @@ export const Search = {
 			if (category === "profiles") {
 				results = await Search.profiles(query, pageOffset, pageLength);
 				return new Profiles(
+					pageOffset,
+					pageLength,
 					results.hits.total,
 					results.hits.hits.map(result => result._source)
 				);
 			} else if (category === "projects") {
 				results = await Search.projects(query, pageOffset, pageLength);
 				return new Projects(
+					pageOffset,
+					pageLength,
 					results.hits.total,
 					results.hits.hits.map(result => result._source)
 				);
 			} else if (category === "demos") {
 				results = await Search.demos(query, pageOffset, pageLength);
 				return new Demos(
+					pageOffset,
+					pageLength,
 					results.hits.total,
 					results.hits.hits.map(result => result._source)
 				);
