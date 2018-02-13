@@ -108,13 +108,8 @@ export const Profile = {
 					from: pageOffset,
 					size: pageLength,
 					query: {
-						bool: {
-							must: {
-								term: { profileStatus: "active" }
-							},
-							filter: {
-								term: { id: id }
-							}
+						match: {
+							id: id
 						}
 					}
 				}
