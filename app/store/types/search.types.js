@@ -10,19 +10,25 @@ import {
 	GraphQLUnionType
 } from "graphql";
 
-import { ProfileSchema, DemoSchema, ProjectSchema } from "../schema";
+import {
+	SearchProfileSchema,
+	SearchDemosSchema,
+	SearchProjectsSchema
+} from "../schema";
 
 export const SearchResponseType = () => ({
+	pageLength: { type: GraphQLID, description: "page length" },
+	pageOffset: { type: GraphQLID, description: "page offset" },
 	profiles: {
-		type: new GraphQLList(ProfileSchema),
-		description: "List of profiles"
+		type: SearchProfileSchema,
+		description: "list of all profiles"
 	},
 	demos: {
-		type: new GraphQLList(DemoSchema),
+		type: SearchDemosSchema,
 		description: "List of demos"
 	},
 	projects: {
-		type: new GraphQLList(ProjectSchema),
+		type: SearchProjectsSchema,
 		description: "List of projects"
 	}
 });

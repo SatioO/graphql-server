@@ -14,8 +14,10 @@ import {
 	DemoResponseSchema,
 	ProjectResponseSchema,
 	SearchResponseSchema,
-	ProjectSchema
-} from "../schema";
+	UnionSearchResultSchema,
+	ProjectSchema,
+	SearchType
+} from "../index";
 
 export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 	name: "LeaderShipAppSchema",
@@ -170,6 +172,30 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 				}
 			},
 			resolve: Search.find
+		},
+		searchOne: {
+			type: SearchType,
+			description: "Search profiles, projects and presentations",
+			args: {
+				category: {
+					type: GraphQLString,
+					description: "search term"
+				},
+				query: {
+					type: new GraphQLNonNull(GraphQLString),
+					description: "search term"
+				},
+				pageOffset: {
+					type: GraphQLInt,
+					description: "Skip n documents from the cursor"
+				},
+				pageLength: {
+					type: GraphQLInt,
+					description:
+						"Cap the number of documents to be returned from the cursor"
+				}
+			},
+			resolve: Search.findOne
 		}
 	})
 });

@@ -1,4 +1,5 @@
 import { client } from "../config/connection";
+import { Profiles, Projects, Demos } from "../store";
 
 export const Search = {
 	find: async (_, { query = null, pageOffset = 0, pageLength = 10 }) => {
@@ -10,10 +11,54 @@ export const Search = {
 			]);
 
 			return {
-				profiles: store[0].hits.hits.map(profile => profile._source),
-				projects: store[1].hits.hits.map(project => project._source),
-				demos: store[2].hits.hits.map(demo => demo._source)
+				pageOffset: pageOffset,
+				pageLength: pageLength,
+				profiles: {
+					total: store[0].hits.total,
+					items: store[0].hits.hits.map(profile => profile._source)
+				},
+				projects: {
+					total: store[1].hits.total,
+					items: store[1].hits.hits.map(project => project._source)
+				},
+				demos: {
+					total: store[2].hits.total,
+					items: store[2].hits.hits.map(demo => demo._source)
+				}
 			};
+		} catch (error) {
+			return error;
+		}
+	},
+	findOne: async (
+		_,
+		{ category, query = null, pageOffset = 0, pageLength = 10 },
+		context,
+		graph
+	) => {
+		try {
+			let results = null;
+			if (category === "profiles") {
+				results = await Search.profiles(query, pageOffset, pageLength);
+				return new Profiles(
+					results.hits.total,
+					results.hits.hits.map(result => result._source)
+				);
+			} else if (category === "projects") {
+				results = await Search.projects(query, pageOffset, pageLength);
+				return new Projects(
+					results.hits.total,
+					results.hits.hits.map(result => result._source)
+				);
+			} else if (category === "demos") {
+				results = await Search.demos(query, pageOffset, pageLength);
+				return new Demos(
+					results.hits.total,
+					results.hits.hits.map(result => result._source)
+				);
+			} else {
+				throw new TypeError("Unknown Category");
+			}
 		} catch (error) {
 			return error;
 		}
