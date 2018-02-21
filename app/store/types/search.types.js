@@ -11,24 +11,24 @@ import {
 } from "graphql";
 
 import {
-	SearchProfileSchema,
-	SearchDemosSchema,
-	SearchProjectsSchema
+	ProfileResponseSchema,
+	DemoResponseSchema,
+	ProjectResponseSchema
 } from "../schema";
 
 export const SearchResponseType = () => ({
 	pageLength: { type: GraphQLID, description: "page length" },
 	pageOffset: { type: GraphQLID, description: "page offset" },
 	profiles: {
-		type: SearchProfileSchema,
+		type: ProfileResponseSchema,
 		description: "list of all profiles"
 	},
 	demos: {
-		type: SearchDemosSchema,
+		type: DemoResponseSchema,
 		description: "List of demos"
 	},
 	projects: {
-		type: SearchProjectsSchema,
-		description: "List of projects"
+		type: ProjectResponseSchema,
+		description: "List of demos"
 	}
 });

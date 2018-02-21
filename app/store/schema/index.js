@@ -8,7 +8,7 @@ import {
 
 import { Profile, Demo, Store, Project, Search } from "../../controllers";
 import {
-	ProfileSchema,
+	ProfileResponseSchema,
 	DemoSchema,
 	StoreResponseSchema,
 	DemoResponseSchema,
@@ -24,7 +24,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 	description: "Schema of Leadership Demo Application",
 	fields: () => ({
 		profiles: {
-			type: ProfileSchema,
+			type: ProfileResponseSchema,
 			description: "List of all profiles",
 			args: {
 				category: {
@@ -54,7 +54,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 			resolve: Profile.find
 		},
 		profile: {
-			type: ProfileSchema,
+			type: ProfileResponseSchema,
 			description: "Get profile by id",
 			args: {
 				id: {

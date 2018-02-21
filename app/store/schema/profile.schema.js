@@ -18,7 +18,7 @@ export const ProfileInputSchema = new GraphQLInputObjectType({
 	fields: ProfileInputType
 });
 
-export const ProfileSchema = new GraphQLObjectType({
+export const ProfileResponseSchema = new GraphQLObjectType({
 	name: "PROFILE",
 	description: "Profile schema",
 	fields: {

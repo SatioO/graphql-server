@@ -1,9 +1,9 @@
 import { GraphQLNonNull, GraphQLString, GraphQLID } from "graphql";
-import { ProfileSchema, ProfileInputSchema } from "../schema";
+import { ProfileResponseSchema, ProfileInputSchema } from "../schema";
 import { Profile } from "../../controllers";
 
 export const CreateProfile = {
-	type: new GraphQLNonNull(ProfileSchema),
+	type: new GraphQLNonNull(ProfileResponseSchema),
 	description: "Create Profile",
 	args: {
 		data: {
@@ -15,7 +15,7 @@ export const CreateProfile = {
 };
 
 export const UpdateProfile = {
-	type: new GraphQLNonNull(ProfileSchema),
+	type: new GraphQLNonNull(ProfileResponseSchema),
 	description: "Update Profile",
 	args: {
 		data: {
@@ -27,7 +27,7 @@ export const UpdateProfile = {
 };
 
 export const DeleteProfile = {
-	type: new GraphQLNonNull(ProfileSchema),
+	type: new GraphQLNonNull(ProfileResponseSchema),
 	description: "Delete Profile",
 	args: {
 		id: {
