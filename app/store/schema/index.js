@@ -183,7 +183,7 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 			resolve: Search.find
 		},
 		searchOne: {
-			type: SearchType,
+			type: UnionSearchResultSchema,
 			description: "Search profiles, projects and presentations",
 			args: {
 				category: {
