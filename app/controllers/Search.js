@@ -2,12 +2,17 @@ import { client } from "../config/connection";
 import { Profiles, Projects, Demos } from "../store";
 
 export const Search = {
-	find: async (_, { query = null, pageOffset = 0, pageLength = 10 }) => {
+	find: async (_, {
+		query = null,
+		pageOffset = 0,
+		pageLength = 10,
+		termQuery = null
+	},) => {
 		try {
 			const store = await Promise.all([
-				Search.profiles(query, pageOffset, pageLength),
-				Search.projects(query, pageOffset, pageLength),
-				Search.demos(query, pageOffset, pageLength)
+				Search.profiles(query, pageOffset, pageLength, termQuery),
+				Search.projects(query, pageOffset, pageLength, termQuery),
+				Search.demos(query, pageOffset, pageLength, termQuery)
 			]);
 
 			return {
@@ -69,191 +74,221 @@ export const Search = {
 			return error;
 		}
 	},
-	profiles: (query, pageOffset, pageLength) => {
-		return client.search({
+	profiles: (query, pageOffset, pageLength, termQuery) => {
+		const esQuery = {
 			index: "aic",
-			type: "profiles",
-			body: {
-				from: pageOffset,
-				size: pageLength,
-				query: {
-					bool: {
-						must: {
-							multi_match: {
-								query: query,
-								type: "best_fields",
-								fields: [
-									"name",
-									"email",
-									"introduction",
-									"description",
-									"skills.*",
-									"location",
-									"designation",
-									"tagline",
-									"tags",
-									"photograph",
-									"education"
-								],
-								operator: "and"
-							}
-						},
-						filter: {
-							term: {
-								profileStatus: "active"
-							}
-						}
-					}
-				},
-				aggs: {
-					ui: {
-						terms: {
-							field: "skills.ui"
-						}
-					},
-					db: {
-						terms: {
-							field: "skills.db"
-						}
-					},
-					cloud: {
-						terms: {
-							field: "skills.cloud"
-						}
-					},
-					app: {
-						terms: {
-							field: "skills.app"
-						}
-					},
-					devops: {
-						terms: {
-							field: "skills.devops"
-						}
-					}
-				}
-			}
-		});
+			type: "profiles"
+		}
+		if (termQuery) {
+			esQuery.body = queryBody(query, pageOffset, pageLength, termQuery).termQuery;
+		} else {
+			esQuery.body = queryBody(query, pageOffset, pageLength, termQuery).profilesQuery;
+		}
+		return client.search(esQuery);
 	},
-	demos: (query, pageOffset, pageLength) => {
-		return client.search({
+	demos: (query, pageOffset, pageLength, termQuery) => {
+		const esQuery = {
 			index: "aic",
-			type: "presentations",
-			body: {
-				query: {
-					bool: {
-						must: {
-							multi_match: {
-								query: query,
-								type: "best_fields",
-								fields: [
-									"id",
-									"title",
-									"tagline",
-									"description",
-									"techstack.*",
-									"authors",
-									"categories",
-									"milestone"
-								],
-								operator: "and"
-							}
-						},
-						filter: {
-							term: {
-								milestone: "approved"
-							}
-						}
-					}
-				},
-				aggs: {
-					ui: {
-						terms: {
-							field: "techstack.ui"
-						}
-					},
-					db: {
-						terms: {
-							field: "techstack.db"
-						}
-					},
-					cloud: {
-						terms: {
-							field: "techstack.cloud"
-						}
-					},
-					app: {
-						terms: {
-							field: "techstack.app"
-						}
-					},
-					devops: {
-						terms: {
-							field: "techstack.devops"
-						}
-					}
-				}
-			}
-		});
+			type: "presentations"
+		}
+		if (termQuery) {
+			esQuery.body = queryBody(query, pageOffset, pageLength, termQuery).termQuery;
+		} else {
+			esQuery.body = queryBody(query, pageOffset, pageLength, termQuery).demosQuery;
+		}
+		return client.search(esQuery);
 	},
-	projects: (query, pageOffset, pageLength) => {
-		return client.search({
+	projects: (query, pageOffset, pageLength, termQuery) => {
+		const esQuery = {
 			index: "aic",
-			type: "projects",
-			body: {
-				query: {
-					bool: {
-						must: {
-							multi_match: {
-								query: query,
-								type: "best_fields",
-								fields: [
-									"project_id",
-									"project_name",
-									"tags",
-									"description",
-									"techstack.*",
-									"client_name",
-									"project_docs"
-								],
-								operator: "and"
-							}
-						},
-						filter: {
-							term: {
-								is_approved: "1"
-							}
-						}
-					}
-				},
-				aggs: {
-					ui: {
-						terms: {
-							field: "techstack.ui"
-						}
-					},
-					db: {
-						terms: {
-							field: "techstack.db"
-						}
-					},
-					cloud: {
-						terms: {
-							field: "techstack.cloud"
-						}
-					},
-					app: {
-						terms: {
-							field: "techstack.app"
-						}
-					},
-					devops: {
-						terms: {
-							field: "techstack.devops"
-						}
-					}
-				}
-			}
-		});
+			type: "projects"
+		}
+		if (termQuery) {
+			esQuery.body = queryBody(query, pageOffset, pageLength, termQuery).termQuery;
+		} else {
+			esQuery.body = queryBody(query, pageOffset, pageLength, termQuery).projectsQuery;
+		}
+		return client.search(esQuery);
 	}
 };
+/**
+ * returns queryBody for specific case
+ */
+const queryBody = (query, pageOffset, pageLength, termQuery) => ({
+	profilesQuery: {
+		from: pageOffset,
+		size: pageLength,
+		query: {
+			bool: {
+				must: {
+					multi_match: {
+						query: query,
+						type: "best_fields",
+						fields: [
+							"name",
+							"email",
+							"introduction",
+							"description",
+							"skills.*",
+							"location",
+							"designation",
+							"tagline",
+							"tags",
+							"photograph",
+							"education"
+						],
+						operator: "and"
+					}
+				},
+				filter: {
+					term: {
+						profileStatus: "active"
+					}
+				}
+			}
+		},
+		aggs: {
+			ui: {
+				terms: {
+					field: "skills.ui"
+				}
+			},
+			db: {
+				terms: {
+					field: "skills.db"
+				}
+			},
+			cloud: {
+				terms: {
+					field: "skills.cloud"
+				}
+			},
+			app: {
+				terms: {
+					field: "skills.app"
+				}
+			},
+			devops: {
+				terms: {
+					field: "skills.devops"
+				}
+			}
+		}
+	},
+	demosQuery: {
+		query: {
+			bool: {
+				must: {
+					multi_match: {
+						query: query,
+						type: "best_fields",
+						fields: [
+							"id",
+							"title",
+							"tagline",
+							"description",
+							"techstack.*",
+							"authors",
+							"categories",
+							"milestone"
+						],
+						operator: "and"
+					}
+				},
+				filter: {
+					term: {
+						milestone: "approved"
+					}
+				}
+			}
+		},
+		aggs: {
+			ui: {
+				terms: {
+					field: "techstack.ui"
+				}
+			},
+			db: {
+				terms: {
+					field: "techstack.db"
+				}
+			},
+			cloud: {
+				terms: {
+					field: "techstack.cloud"
+				}
+			},
+			app: {
+				terms: {
+					field: "techstack.app"
+				}
+			},
+			devops: {
+				terms: {
+					field: "techstack.devops"
+				}
+			}
+		}
+	},
+	projectsQuery: {
+		query: {
+			bool: {
+				must: {
+					multi_match: {
+						query: query,
+						type: "best_fields",
+						fields: [
+							"project_id",
+							"project_name",
+							"tags",
+							"description",
+							"techstack.*",
+							"client_name",
+							"project_docs"
+						],
+						operator: "and"
+					}
+				},
+				filter: {
+					term: {
+						is_approved: "1"
+					}
+				}
+			}
+		},
+		aggs: {
+			ui: {
+				terms: {
+					field: "techstack.ui"
+				}
+			},
+			db: {
+				terms: {
+					field: "techstack.db"
+				}
+			},
+			cloud: {
+				terms: {
+					field: "techstack.cloud"
+				}
+			},
+			app: {
+				terms: {
+					field: "techstack.app"
+				}
+			},
+			devops: {
+				terms: {
+					field: "techstack.devops"
+				}
+			}
+		}
+	},
+	termQuery: {
+		from: pageOffset,
+		size: pageLength,
+		query: {
+			term: { [termQuery]: query }
+		}
+	}
+})

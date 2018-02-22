@@ -43,6 +43,7 @@ export const ProjectType = () => ({
 	techstack: { type: SkillSchema, description: "Project techstack" },
 	project_manager: { type: GraphQLString, description: "Project manager" },
 	active: { type: GraphQLString, description: "Project status" },
+	coe: { type: GraphQLString, description: "types of coe" },
 	approved_by: { type: GraphQLString, description: "Project approved by" },
 	approved_on: { type: GraphQLString, description: "Project approved on" },
 	client_id: { type: GraphQLID, description: "Project approved on" },

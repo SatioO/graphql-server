@@ -51,6 +51,7 @@ export const DemoType = () => ({
 		type: SkillSchema,
 		description: "Demo techstack"
 	},
+	coe: { type: GraphQLString, description: "types of coe" },
 	description: { type: GraphQLString, description: "Demo description" },
 	type: { type: GraphQLString, description: "Demo Type" },
 	embedUrl: { type: GraphQLString, description: "Demo Url" },

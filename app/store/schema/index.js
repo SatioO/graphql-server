@@ -173,7 +173,12 @@ export const LeaderShipQueryRootSchema = new GraphQLObjectType({
 					type: GraphQLInt,
 					description:
 						"Cap the number of documents to be returned from the cursor"
+				},
+				termQuery:{
+					type: GraphQLString,
+					description: "it will perform term query on its value with the query"
 				}
+
 			},
 			resolve: Search.find
 		},

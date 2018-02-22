@@ -31,6 +31,7 @@ export const ProfileType = () => ({
 	github: { type: GraphQLString, description: "Github URL of User" },
 	location: { type: GraphQLString, description: "User Location" },
 	education: { type: GraphQLString, description: "Education Details of User" },
+	coe: { type: GraphQLString, description: "types of coe" },
 	aiclevel: {
 		type: GraphQLString,
 		description: "Role of User"

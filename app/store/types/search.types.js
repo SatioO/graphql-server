@@ -25,10 +25,10 @@ export const SearchResponseType = () => ({
 	},
 	demos: {
 		type: DemoResponseSchema,
-		description: "List of demos"
+		description: "List of all demos"
 	},
 	projects: {
 		type: ProjectResponseSchema,
-		description: "List of demos"
+		description: "List of all projects"
 	}
 });
