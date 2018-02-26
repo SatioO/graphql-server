@@ -72,14 +72,16 @@ app.use((req, res, next) => {
 });
 
 // GraphQL Configuration
-app.use(
-	"/",
+app.use("/", (req, res) => {
+
 	graphqlHTTP({
 		graphiql: true,
 		pretty: true,
-		schema: LeadershipAppSchema
-	})
-);
+		schema: LeadershipAppSchema,
+		context: { req, res }
+	})(req, res);
+
+});
 
 app.get("*", (req, res) => {
 	res.status(404).send({

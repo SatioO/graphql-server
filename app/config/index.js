@@ -11,7 +11,10 @@ let config = {
 	database: {
 		connect_uri: `mongodb://${process.env.HOST}:27017/aic`
 	},
-	jwt_secret: "aicteamisawesome"
+	jwt_secret: "aicteamisawesome",
+	pa_dialog_flow: {
+		createIntents:"https://api.dialogflow.com/v1/intents?v=20150910"
+	}
 };
 
 if (process.env.NODE_ENV === "production") {
@@ -24,7 +27,10 @@ if (process.env.NODE_ENV === "production") {
 		database: {
 			connect_uri: `mongodb://${process.env.HOST}:27017/aic`
 		},
-		jwt_secret: "aicteamisawesome"
+		jwt_secret: "aicteamisawesome",
+		pa_dialog_flow: {
+			createIntents:"https://api.dialogflow.com/v1/intents?v=20150910"
+		}
 	};
 }
 
