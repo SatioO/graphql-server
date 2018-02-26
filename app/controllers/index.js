@@ -3,3 +3,4 @@ export * from "./Demo";
 export * from "./Store";
 export * from "./Project";
 export * from "./Search";
+export * from "./Intents";
